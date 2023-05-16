@@ -143,6 +143,8 @@ h2 {
 }
 .sect_2 h2 {
   margin: 0 0 -100px 100px;
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
 }
 .sect_2 .content_wrap {
   position: relative;

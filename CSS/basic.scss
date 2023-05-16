@@ -68,7 +68,7 @@ h2{
 .sect_2 {padding: 100px 0;
     position: relative;
     .bg_2 {left:20%}
-    h2{margin: 0 0 -100px 100px;}
+    h2{margin: 0 0 -100px 100px; color: transparent; -webkit-text-stroke: 2px #000; }
     .content_wrap{position:relative; display:flex; flex-wrap: wrap; justify-content: center;
         .content{
             display:flex;
