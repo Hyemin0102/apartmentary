@@ -1,0 +1,131 @@
+{ 
+    "wood": [
+        {
+            "name":"마포더클래시 아파트",
+            "info":"아기자기한 아이방과 주방 인테리어를 만나보세요 ",
+            "img":"../img/portfolio_wood_01.jpg"
+        },
+        {
+            "name":"마포 성산시영 아파트",
+            "info":"화이트 우드 인테리어로 아늑하게 완성된 공간을 만나보세요",
+            "img":"../img/portfolio_wood_02.jpg"
+        },
+        {
+            
+            "name":"고양 힐스테이트일산 아파트",
+            "info":"크림 화이트&오크 조합이 매력적인 공간을 만나보세요",
+            "img":"../img/portfolio_wood_03.jpg"
+        },
+        {
+            "name":"강서 마곡엠밸리 아파트",
+            "info":"라이프스타일에 딱 맞춘 디테일, 화이트톤 인테리어를 만나보세요",
+            "img":"../img/portfolio_wood_04.jpg"
+        },
+        {
+            "name":"용인 내대지마을푸르지오 아파트",
+            "info":"산뜻한 포인트 컬러로 완성된 화이트&우드 인테리어를 만나보세요",
+            "img":"../img/portfolio_wood_05.jpg"
+        },
+        {
+            "name":"강남 서초더샵포레 아파트",
+            "info":"우드톤 주방으로 분위기 있는 인테리어를 만나보세요",
+            "img":"../img/portfolio_wood_06.jpg"
+        },
+        {
+            "name":"의왕 백운밸리골드클래스 아파트",
+            "info":"화이트&우드톤으로 햇살처럼 따스하게 꾸민 공간을 만나보세요",
+            "img":"../img/portfolio_wood_07.jpg"
+        },
+        {
+            "name":"하남 미사 강변 더샵센트럴포레 아파트",
+            "info":"화사한 화이트우드 인테리어를 만나보세요",
+            "img":"../img/portfolio_wood_08.jpg"
+        }
+    ],
+    "color": [
+        {
+            "name":"위례 중흥S클래스 아파트",
+            "info":"뻔하지 않은 신축 아파트 인테리어를 만나보세요",
+            "img":"../img/portfolio_color_01.jpg"
+        },
+        {
+            "name":"구로 현대파크빌 아파트",
+            "info":"취향 가득 담은 50평대 인테리어를 만나보세요",
+            "img":"../img/portfolio_color_02.jpg"
+        },
+        {
+            "name":"강동 고덕아르테온 아파트",
+            "info":"민트 컬러로 포인트를 준 30평대 아파트를 만나보세요",
+            "img":"../img/portfolio_color_03.jpg"
+        },
+        {
+            "name":"마포 프레스티지자이 아파트",
+            "info":"거실이 칵테일바로 변신한 공간을 만나보세요",
+            "img":"../img/portfolio_color_04.jpg"
+        }
+    ],
+    "kids": [
+        {
+            "name":"강남 서초더샵포레 아파트",
+            "info":"추억이 깃든 가구에 맞춰 더욱 멋스러운 내추럴 인테리어를 만나보세요",
+            "img":"../img/portfolio_kids_01.jpg"
+        },
+        {
+            "name":"파주 해솔마을 운정현대 아파트 ",
+            "info":"미니멀한 바탕의 미드센추리 인테리어를 만나보세요",
+            "img":"../img/portfolio_kids_02.jpg"
+        },
+        {
+            "name":"방배 그랑자이 아파트",
+            "info":"아늑한 화이트&월넛 우드 인테리어를 만나보세요",
+            "img":"../img/portfolio_kids_03.jpg"
+        },
+        {
+            "name":"관악 제창그로힐 아파트 ",
+            "info":"차분한 화이트 인테리어를 만나보세요",
+            "img":"../img/portfolio_kids_04.jpg"
+        },
+        {
+            "name":"마포 창전 현대홈타운 아파트 ",
+            "info":"화이트 실링팬을 적용한 구축 아파트 인테리어를 만나보세요 ",
+            "img":"../img/portfolio_kids_05.jpg"
+        },
+        {
+            "name":"송파 레이크파크호반써밋 1차 아파트 ",
+            "info":"화이트&베이지 인테리어를 만나보세요 ",
+            "img":"../img/portfolio_kids_06.jpg"
+        },
+        {
+            "name":"인천 풍림아이원 아파트",
+            "info":"옐로우톤으로 화사하고 세련된 인테리어를 만나보세요",
+            "img":"../img/portfolio_kids_07.jpg"
+        },
+        {
+            "name":"고양 동산마을 호반베르디움 아파트",
+            "info":"화이트와 우드로 따뜻하게 풀어낸 공간을 만나보세요",
+            "img":"../img/portfolio_color_01.jpg"
+        }
+    ],
+    "kitchen": [
+        {
+            "name":"성동 래미안옥수리버젠 아파트",
+            "info":"심플한 미니멀 화이트 인테리어를 만나보세요",
+            "img":"../img/portfolio_kitchen_01.jpg"
+        },
+        {
+            "name":"성남 e편한세상금빛그랑메종 아파트",
+            "info":"기존 마감재를 살리면서 분위기를 바꾼 공간을 만나보세요",
+            "img":"../img/portfolio_kitchen_02.jpg"
+        },
+        {
+            "name":"영등포 삼부 아파트 ",
+            "info":"주방부터 욕실, 아이방까지 다채롭게 완성된 공간을 만나보세요",
+            "img":"../img/portfolio_kitchen_03.jpg"
+        },
+        {
+            "name":"용산 더프라임 아파트",
+            "info":"고급스러운 모던 인테리어를 만나보세요",
+            "img":"../img/portfolio_kitchen_04.jpg"
+        }
+    ]
+}
