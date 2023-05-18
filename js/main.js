@@ -1,5 +1,20 @@
-import products from "../../portfolio.json" assert {type:'json'}
-console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
+fetch('../portfolio.json')
+  .then(response => response.json())
+  .then(data => {
+    // JSON 데이터가 정상적으로 로드되었는지 확인
+    products = data;
+    //console.log(products);
+  })
+  .catch(error => {
+    // 오류 처리
+    console.error(error);
+  });
+
+
+
+/* import products from "../../portfolio.json" assert {type:'json'}
+console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류) */
+
 
 const creatItem = (key) =>{
     const portfolioWrap = document.querySelector('.portfolio_wrap');
