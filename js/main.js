@@ -22,9 +22,6 @@ const creatItem = (targetArr) =>{
 
 }
 
-let activeKey = document.querySelector('.active');
-
-
 
 //클릭하는 변수 지정
 let keywords = document.querySelectorAll('.keyword_wrap > li');
@@ -51,4 +48,35 @@ const swiper = new Swiper(".review_right", {
         hide: false,
     },
   });
+
+    let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
+    gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
+    
+    function animateElements(animateElements, onCompleteFn) {
+        gsap.to(animateElements[0], { duration: 1, opacity: 1, y: 0, repeat: 0, onComplete: onCompleteFn });
+    }
+    
+    function createScrollTrigger(triggerClass, animationElements, onCompleteFn) {
+        ScrollTrigger.create({
+            trigger: triggerClass,
+            start: "top center",
+            end: "bottom center",
+            onEnter: function() {animateElements(animationElements, onCompleteFn);},
+            onEnterBack: function() {animateElements(animationElements, onCompleteFn);
+            }
+        });
+    }
+    
+    let sect02_animatedElements = document.querySelectorAll('.animation2');
+    createScrollTrigger('.animation2scroll', sect02_animatedElements, function() {
+        gsap.to(sect02_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
+    });
+    
+    let sect03_animatedElements = document.querySelectorAll('.animation3');
+    createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
+        gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
+    });
+
+
+
 

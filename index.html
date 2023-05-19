@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/basic.css">
     <script src="js/prefixfree.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script defer type="module" src="js/main.js"></script>
 </head>
@@ -47,38 +49,53 @@
     <section class="sect_2">
         <div class="sect_inner">
             <div class="sect_2_txt">
-                <div class="txt_wrap">
-                    <p>기분 좋은 인테리어의 시작과 끝</p>
-                    <p>첫 상담부터 공사 마무리까지 매뉴얼화된 프로세스와
-                        투명하고 정직한 견적 시스템,<br>
-                        취향을 찾아주는 인테리어 디자인까지.
-                        아파트멘터리와 함께한 인테리어라면
-                        설렘만 가득한 경험이 될 거예요.</p>
+                <div class="sect_2_txt_wrap animation2scroll">
+                    <div class="sect_2_txt_top animation2">
+                        <p>기분 좋은 인테리어의 시작과 끝</p>
+                    </div> 
+                    <div class="sect_2_txt_bottom animation2">
+                        <p>첫 상담부터 공사 마무리까지 매뉴얼화된 프로세스와
+                            투명하고 정직한 견적 시스템,
+                            취향을 찾아주는 인테리어 디자인까지.
+                        </p>
+                        <p>
+                            아파트멘터리와 함께한 인테리어라면
+                            설렘만 가득한 경험이 될 거예요.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="sect_2_img">
-                <div class="img_wrap">
+                <div class="sect_2_img_wrap">
                     <img src="./img/serviece.avif" alt="">
                 </div>
             </div>
         </div>
         <div class="sect_inner">
             <div class="sect_2_img">
-                <div class="img_wrap">
+                <div class="sect_2_img_wrap">
                     <img src="./img/serviece_02.avif" alt="">
                 </div>
             </div>
             <div class="sect_2_txt">
-                <div class="txt_wrap">
-                    <p>체계적이고 효율적인 프로세스</p>
-                    <p>
-                        우리 가족이 오랜 시간 살 집이니까,
-                        꼼꼼하고 체계적인 서비스가 중요하죠.<br>
-                        계약서, 매니저 소통, 공사 현황을
-                        전용 앱으로 모두 확인할 수 있어요.<br>
-                        마감 체크와 공사 후 A/S까지
-                        아파트멘터리가 함께할게요.
+                <div class="sect_2_txt_wrap animation3scroll">
+                    <div class="sect_2_txt_top animation3">
+                        <p>체계적이고 효율적인 프로세스</p>
+                    </div>
+                    <div class="sect_2_txt_bottom animation3">
+                        <p>
+                            우리 가족이 오랜 시간 살 집이니까,
+                            꼼꼼하고 체계적인 서비스가 중요하죠.
                         </p>
+                        <p>
+                            계약서, 매니저 소통, 공사 현황을
+                            전용 앱으로 모두 확인할 수 있어요.
+                        </p>
+                        <p>
+                            마감 체크와 공사 후 A/S까지
+                            아파트멘터리가 함께할게요.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -252,24 +269,28 @@
             <div class="review_left">
                 <h2>What our customers say</h2>
                 <div class="review_more">
-                        More+
+                    <a href="#">
+                        <span>More</span>
+                        <span><img src="./img/arrow.png" alt=""></span>
+                    </a>
                 </div>
             </div>
-            <!-- swiper -->
             <div class="swiper review_right">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="review_card">
-                            <div class="review_name">이**님</div>
-                            <div class="review_star">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="review_content">
-                                빠듯한 일정이었는데도 최선을 다해 소통하려고 노력해주셔서 감사합니다. 인테리어를 해본적이 없어 내가 좋아하는게 어떤건지 잘 모르는데 이야기를 나누면서 컨셉을 명확히 할 수 있어서 좋았습니다. 그리고 이 바닥에 이런 색이 어울릴까, 어떤 느낌일까 고민이 될때 3d로 시안을 받게 되니 가구를 선택하는데 큰 도움이 되었습니다!!! 기존 가구와의 맞춤도 잘 이해해주셔서 버릴뻔한 가구의 생명을 얻게 된 것도 좋았습니다 제안해준 그림도 집에 찰떡같이 잘 어울리고, 하다보니 어떤게 맞을지 고민스러워 여러 제안을 부탁드렸을때 편하게 말씀해달라며 이것 저것 열심히 찾아주셔서 감사합니다~~~^^
+                            <div class="review_preview">
+                                <div class="review_name">이**님</div>
+                                <div class="review_star">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="review_content">
+                                    빠듯한 일정이었는데도 최선을 다해 소통하려고 노력해주셔서 감사합니다. 인테리어를 해본적이 없어 내가 좋아하는게 어떤건지 잘 모르는데 이야기를 나누면서 컨셉을 명확히 할 수 있어서 좋았습니다. 그리고 이 바닥에 이런 색이 어울릴까, 어떤 느낌일까 고민이 될때 3d로 시안을 받게 되니 가구를 선택하는데 큰 도움이 되었습니다!!! 기존 가구와의 맞춤도 잘 이해해주셔서 버릴뻔한 가구의 생명을 얻게 된 것도 좋았습니다 제안해준 그림도 집에 찰떡같이 잘 어울리고, 하다보니 어떤게 맞을지 고민스러워 여러 제안을 부탁드렸을때 편하게 말씀해달라며 이것 저것 열심히 찾아주셔서 감사합니다~~~^^
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -289,7 +310,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="review_card">
-                            <div class="review_name">이**님</div>
+                            <div class="review_name">김**님</div>
                             <div class="review_star">
                                 <span></span>
                                 <span></span>
@@ -440,8 +461,7 @@
                 </div>
             </div>
         </div>
-        
-        <!-- swiper -->
+
     </section>
 
     <section class="sect_6">
@@ -451,12 +471,58 @@
     </section>
 
     <footer>
-      <div class="footer_wrap">
-        <div class="footer_left">
-            <a href="#"><img src="./img/footer_logo.svg" alt=""></a>
+        <div class="footer_wrap">
+            <div class="footer_left">
+                <a href="#"><img src="./img/footer_logo.svg" alt=""></a>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_top">
+                    <div class="footer_right_cont">
+                        <h4>정보</h4>
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">아파트멘터리 브랜드</a></li>
+                            <li><a href="#">아파트멘터리 파츠</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_right_cont">
+                        <h4>안내</h4>
+                        <ul>
+                            <li><a href="#">가까운 직영점</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li>
+                                <span><a href="#"><img src="./img/footer_blog.svg" alt=""></a></span>
+                                <span><a href="#"><img src="./img/footer_insta.svg" alt=""></a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_right_cont">
+                        <h4>고객센터</h4>
+                        <ul>
+                            <li><a href="#">전화번호 | 02-6356-1224</a></li>
+                            <li><a href="#">영업시간 | 평일 10:00~19:00(공휴일 제외)</a></li>
+                            <li><a href="#">ASK@APARTMENTARY.COM</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">서비스 후기작성</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_right_bottom">
+                    <div>
+                        이용약관 | 개인정보처리방침
+                    </div>
+                    <div>
+                        <p>
+                            · 법인명: 아파트멘터리(주) · 대표자: 윤소연, 김준영 · 사업자 등록번호: 723-87-00195· 통신판매업 신고: 제 2016-서울마포-0923호· 개인정보관리책임자: 황은미(mia@apartmentary.com)· 주소: 서울특별시 강남구 도산대로 237 3,4F · 02-6356-1224
+                        </p>
+                        <p>
+                            © 2015-2022 All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer_right"></div>
-      </div>
     </footer>
 </body>
 </html>
