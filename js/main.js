@@ -1,5 +1,5 @@
 import products from "../portfolio.json" assert {type:'json'}
-console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
+//console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
 
 
 const creatItem = (targetArr) =>{
@@ -83,6 +83,29 @@ const swiper = new Swiper(".review_right", {
     createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
         gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
     });
+
+    //모바일 메뉴 오픈
+    const header_mo = document.querySelector('header.mobile');
+    const menuBtn = document.querySelectorAll('.gnb_btn');
+    const body = document.querySelector('body'); 
+
+    menuBtn.forEach((el)=>{
+        el.addEventListener('click',()=>{
+            header_mo.classList.toggle('active');
+
+            if(header_mo.classList.contains('active')){
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        })
+    })
+
+    window.addEventListener('scroll',()=>{
+        if(window.scrollY > 40){
+            header_mo.style.backgroundColor = "rgb(245, 245, 245)"
+        } else { header_mo.style.backgroundColor = "transparent"}
+    })
 
 
 
