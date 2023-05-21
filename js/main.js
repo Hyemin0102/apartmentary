@@ -39,7 +39,7 @@ keywords.forEach((el)=>{
 
 
 const swiper = new Swiper(".review_right", {
-    slidesPerView : 3, // 동시에 보여줄 슬라이드 갯수
+    slidesPerView : 2, // 동시에 보여줄 슬라이드 갯수
 	spaceBetween : 20, // 슬라이드간 간격
 	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
 	loopFillGroupWithBlank : true,// 그룹수가 맞지 않을 경우 빈칸으로 메우기
@@ -47,7 +47,14 @@ const swiper = new Swiper(".review_right", {
         el: ".swiper-scrollbar",
         hide: false,
     },
-  });
+    breakpoints: {
+        // 화면의 넓이가 767px 이상일 때
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        }
+    });
 
     let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
     gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
