@@ -90,7 +90,7 @@ header.mobile > :first-of-type .gnb_btn > span::after { top:7px; }
 
 header.mobile > :last-of-type .gnb_btn > span { transform: rotate(45deg); }
 header.mobile > :last-of-type .gnb_btn > span::before,
-header.mobile > :last-of-type .gnb_btn > span::after { position: absolute; width: 100%; height: 3px; background: #000; content: ""; }
+header.mobile > :last-of-type .gnb_btn > span::after { position: absolute; width: 100%; height: 2px; background: #000; content: ""; }
 header.mobile > :last-of-type .gnb_btn > span::before { transform: rotate(90deg); }
 header.mobile > :last-of-type .gnb_btn > span::after { display: none; }
 
@@ -99,9 +99,11 @@ header.mobile .gnb_open {position: fixed; z-index: 999; top: 0; left: 0; right: 
 header.mobile .gnb_open .gnb_open_menu{padding: 20px;}
 
 header.mobile.active .gnb_open { transform: translateX(0);}
-header.mobile.active .gnb_open_menu { height: calc(100vh - 50px); padding:30px 20px; overflow: auto;}
+header.mobile.active .gnb_open_menu {padding:30px 20px; overflow: auto;}
 header.mobile.active .gnb_open_menu > li {padding:20px;}
 header.mobile.active .gnb_open_menu > li > a {font-size: 36px; transition: 0.5s;}
+
+header.mobile.active .gnb_bottom{height: 100%; background-color: #212121;}
 
 
 header.mobile.active .gnb_btn {position:relative; width:40px; height:40px; cursor: pointer;}
@@ -358,6 +360,7 @@ h2 {
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {
   padding: 0 30px 0 10px;
+  line-height: 20px;
   font-size:1.1rem;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li:hover {
@@ -368,17 +371,17 @@ h2 {
   position: relative;
   font-weight: 700;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active:before {
   position: absolute;
   right: 9px;
   top: 50%;
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background: url("../img/check_mark.png") no-repeat;
-  background-size: 16px;
+  background-size: contain;
   transform: translateY(-50%);
 }
 .sect_4 .sect_4_wrap .portfolio_wrap {
@@ -472,6 +475,7 @@ h2 {
 .swiper.review_right .swiper-slide .review_card {
   width: 100%;
   padding: 20px;
+  cursor: pointer;
 }
 .swiper.review_right .swiper-slide .review_card .review_name {
   margin: 10px 0;
@@ -649,6 +653,7 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
     color: #000;
     -webkit-text-stroke:unset;
     font-weight: 700;
+    font-size: 2.5rem;
   }
   .sect_3 .content_wrap {flex-direction: column; align-items: center; justify-content: center;}
   .sect_3 .content_wrap .content{width:100%;}
@@ -660,8 +665,9 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
     color: #000;
     -webkit-text-stroke:unset;
     font-weight: 700;
+    font-size: 2.5rem;
   }
-  .sect_4 .sect_4_wrap h3{padding-left: 0; font-size: 1.3rem;}
+  .sect_4 .sect_4_wrap h3{padding: 20px 0; font-size: 1.3rem;}
   .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap {padding: 10px;justify-content: auto;}
   .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {padding: 0 8px;font-size: 0.7rem;}
   .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active {

@@ -9,13 +9,15 @@ const creatItem = (targetArr) =>{
     targetArr.map((el)=>{
         const portfolios = document.createElement('div');
         portfolios.innerHTML = `
-                    <div class="portfolio_img active">
-                        <img src=${el.img} alt="">
-                    </div>
-                    <div class="portfolio_txt">
-                        <p class="portfolio_txt_name">${el.name}</p>
-                        <p class="portfolio_txt_info">${el.info}</p>
-                    </div>
+                    <a href="#">
+                        <div class="portfolio_img active">
+                            <img src=${el.img} alt="">
+                        </div>
+                        <div class="portfolio_txt">
+                            <p class="portfolio_txt_name">${el.name}</p>
+                            <p class="portfolio_txt_info">${el.info}</p>
+                        </div>
+                    </a>
                     `
     portfolioWrap.append(portfolios);
     })
@@ -86,12 +88,14 @@ const swiper = new Swiper(".review_right", {
 
     //모바일 메뉴 오픈
     const header_mo = document.querySelector('header.mobile');
+    console.log('클릭')
     const menuBtn = document.querySelectorAll('.gnb_btn');
     const body = document.querySelector('body'); 
 
     menuBtn.forEach((el)=>{
         el.addEventListener('click',()=>{
             header_mo.classList.toggle('active');
+            console.log('클릭')
 
             if(header_mo.classList.contains('active')){
                 body.style.overflow = 'hidden';
