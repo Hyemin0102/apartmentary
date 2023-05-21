@@ -27,7 +27,8 @@ a {
   padding:20px;
 }
 
-header {
+header.pc {
+  display: none;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -36,7 +37,7 @@ header {
   padding: 20px 0;
   background: rgb(245, 245, 245);
 }
-header .inner {
+header.pc .inner {
   display: flex;
   justify-content: space-between;
   height: 40px;
@@ -45,22 +46,22 @@ header .inner {
   align-items: center;
   padding: 0 20px;
 }
-header .inner .menu {
+header.pc .inner .menu {
   display: flex;
   gap: 20px;
 }
-header .inner .menu li:nth-child(4) {
+header.pc .inner .menu li:nth-child(4) {
   border: 1px solid #000;
   border-radius: 50%;
 }
-header .inner .menu li > a {
+header.pc .inner .menu li > a {
   position: relative;
   display: block;
   font-size: 14px;
   padding: 8px;
   transition: 0.3s;
 }
-header .inner .menu li > a:hover::after {
+header.pc .inner .menu li > a:hover::after {
   position: absolute;
   bottom: 4px;
   left: 0;
@@ -69,6 +70,40 @@ header .inner .menu li > a:hover::after {
   height: 10px;
   background: rgba(0, 0, 0, 0.3);
 }
+
+header.mobile {display:block; line-height: 40px;}
+header.mobile > .inner {display:flex; justify-content: space-between;align-items: center;}
+header.mobile > .inner > * {display:inline-block;}
+header.mobile > .inner img {width:80%}
+
+header.mobile .gnb_btn {position:relative; width:30px; height:30px; cursor: pointer;}
+header.mobile .gnb_btn span { position: absolute; width: 100%; height: 2px; top:calc(50% - 1px); background-color: #000; }
+
+header.mobile > :first-of-type .gnb_btn > span::before,
+header.mobile > :first-of-type .gnb_btn > span::after { position: absolute; width: 100%; height: 2px; background: #000; content: ""; }
+header.mobile > :first-of-type .gnb_btn > span::before { top: -7px; }
+header.mobile > :first-of-type .gnb_btn > span::after { top:7px; }
+
+/* header.mobile > :last-of-type .gnb_btn > span { transform: rotate(45deg); }
+header.mobile > :last-of-type .gnb_btn > span::before,
+header.mobile > :last-of-type .gnb_btn > span::after { position: absolute; width: 100%; height: 3px; background: #000; content: ""; }
+header.mobile > :last-of-type .gnb_btn > span::before { transform: rotate(90deg); }
+header.mobile > :last-of-type .gnb_btn > span::after { display: none; } */
+
+/* header.mobile .gnb_open {position: fixed; z-index: 999; top: 0; left: 0; right: 0; width: 100%;; height: 100vh; transform: translateX(-100%); transition: 0.3s; }
+header.mobile.active .gnb_open { transform: translateX(0); background-color: #000; }
+header.mobile.active .gnb_open_menu { height: calc(100vh - 50px); padding:30px 20px; overflow: auto;}
+header.mobile.active .gnb_open_menu > li {padding:20px;}
+header.mobile.active .gnb_open_menu > li > a {font-size: 36px; transition: 0.5s;}
+
+
+header.mobile.active .gnb_btn {position:relative; width:40px; height:40px; cursor: pointer;}
+
+.gnb_sub > li {padding:10px 0;}
+.gnb_sub > li > a {font-size: 22px; transition: 0.5s;}
+
+.gnb_open_menu > li:hover > a, .gnb_sub > li:hover > a {background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); -webkit-background-clip: text; color: transparent;} */
+
 
 h2, h3 {
   font-family: "Roboto Slab";
@@ -224,7 +259,6 @@ h2 {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   background-color: #fff;
   height: auto;
-  width: 100%;
   transition: all 0.3s;
   padding: 10px;
   margin:20px;
@@ -570,6 +604,7 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
   .content_wrap .content:nth-child(2) {padding-left: 0;}
   .content_wrap .content:nth-child(4) {margin-right: 0;}
   .content_wrap .content:nth-child(5) {padding-top: 0;padding-right: 0;}
+  .content_wrap .content:nth-child(3) > .content_inner {width:340px;}
   .sect_3 .content_wrap .content .content_inner .cont_img {height: 180px;}
   .sect_3 .content_wrap .content .content_inner img{height:100%; object-fit: cover;}
   .sect_3 .content_wrap .content .content_inner:hover {
