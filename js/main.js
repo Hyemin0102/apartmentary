@@ -40,7 +40,7 @@ keywords.forEach((el)=>{
 });
 
 
-/* const swiper = new Swiper(".review_right", {
+const swiper = new Swiper(".review_right", {
     slidesPerView : 2, // 동시에 보여줄 슬라이드 갯수
 	spaceBetween : 20, // 슬라이드간 간격
 	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
@@ -56,7 +56,7 @@ keywords.forEach((el)=>{
           spaceBetween: 20
         },
         }
-    }); */
+    });
 
 /*     let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
     gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
@@ -87,17 +87,16 @@ keywords.forEach((el)=>{
     }); */
 
     //모바일 메뉴 오픈
-    /* const header_mo = document.querySelector('header.mobile');
-    console.log('클릭')
+    const header_mo = document.querySelector('header.mobile');
     const menuBtn = document.querySelectorAll('.gnb_btn');
     
 
     menuBtn.forEach((el)=>{
         el.addEventListener('click',()=>{
             header_mo.classList.toggle('active');
-            console.log('클릭')
+            //console.log('클릭')
         })
-    }) */
+    })
 
 
 /*     window.addEventListener('scroll',()=>{
