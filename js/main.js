@@ -90,18 +90,12 @@ const swiper = new Swiper(".review_right", {
     const header_mo = document.querySelector('header.mobile');
     console.log('클릭')
     const menuBtn = document.querySelectorAll('.gnb_btn');
-    const body = document.querySelector('body'); 
+    //const body = document.querySelector('body'); 
 
     menuBtn.forEach((el)=>{
         el.addEventListener('click',()=>{
             header_mo.classList.toggle('active');
-            console.log('클릭')
-
-            /*if(header_mo.classList.contains('active')){
-                body.style.overflow = 'hidden';
-            } else {
-                body.style.overflow = 'auto';
-            }*/
+            console.log('클릭') 
         })
     })
 
@@ -110,6 +104,12 @@ const swiper = new Swiper(".review_right", {
             header_mo.style.backgroundColor = "rgb(245, 245, 245)"
         } else { header_mo.style.backgroundColor = "transparent"}
     }) */
+
+ /*if(header_mo.classList.contains('active')){
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }*/
 
 
 
