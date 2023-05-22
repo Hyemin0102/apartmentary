@@ -1,4 +1,8 @@
-import products from "../portfolio.json" assert {type:'json'}
+const path = require('path');
+const products = require(path.join(__dirname, '..', 'portfolio.json'));
+
+
+//import products from "../portfolio.json" assert {type:'json'}
 //console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
 
 
