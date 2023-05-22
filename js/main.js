@@ -58,7 +58,7 @@ const swiper = new Swiper(".review_right", {
         }
     });
 
-    let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
+    /*let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
     gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
     
     function animateElements(animateElements, onCompleteFn) {
@@ -85,6 +85,7 @@ const swiper = new Swiper(".review_right", {
     createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
         gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
     });
+    */
 
     //모바일 메뉴 오픈
 /*     const header_mo = document.querySelector('header.mobile');
