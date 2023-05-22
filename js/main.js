@@ -58,7 +58,7 @@ const swiper = new Swiper(".review_right", {
         }
     });
 
-    /*let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
+/*     let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
     gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
     
     function animateElements(animateElements, onCompleteFn) {
@@ -84,11 +84,10 @@ const swiper = new Swiper(".review_right", {
     let sect03_animatedElements = document.querySelectorAll('.animation3');
     createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
         gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
-    });
-    */
+    }); */
 
     //모바일 메뉴 오픈
-/*     const header_mo = document.querySelector('header.mobile');
+    const header_mo = document.querySelector('header.mobile');
     console.log('클릭')
     const menuBtn = document.querySelectorAll('.gnb_btn');
     
@@ -98,7 +97,13 @@ const swiper = new Swiper(".review_right", {
             header_mo.classList.toggle('active');
             console.log('클릭')
         })
-    }) */
+    })
+
+    window.addEventListener('scroll',()=>{
+        if(window.scrollY > 40){
+            header_mo.style.backgroundColor = "rgb(245, 245, 245)"
+        } else { header_mo.style.backgroundColor = "transparent"}
+    }) 
 
 /*     window.addEventListener('scroll',()=>{
         if(window.scrollY > 40){
