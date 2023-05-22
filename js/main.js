@@ -97,11 +97,11 @@ const swiper = new Swiper(".review_right", {
             header_mo.classList.toggle('active');
             console.log('클릭')
 
-            if(header_mo.classList.contains('active')){
+            /*if(header_mo.classList.contains('active')){
                 body.style.overflow = 'hidden';
             } else {
                 body.style.overflow = 'auto';
-            }
+            }*/
         })
     })
 
