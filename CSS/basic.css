@@ -632,14 +632,17 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
 }
 
 @media (max-width:767px){
+  /* header */
   header.pc{display:none;}
   header.mobile{display:block;}
+  /* sect_1 */
   .sect_1 .bg_2 {right:0; left:0;}
   .sect_1 .txt_wrap .txt_main{ color: #000;
     -webkit-text-stroke:unset;}
   .sect_1 .txt_wrap .txt_sub_1, .sect_1 .txt_wrap .txt_sub_2 {
     font-size: 0.8rem;
   }
+  /* sect_2 */
   .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {font-size: 1rem;
   padding: 0 0 10px 0;}
 .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {

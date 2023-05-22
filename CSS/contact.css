@@ -1,0 +1,15 @@
+.contact_wrap{
+    display:flex;
+    max-width: 1480px;
+    width: 100%;
+    height: 830px;
+    border: 1px solid red;
+    margin-top: 80px;
+    margin: 100px auto 0 auto;}
+.contact_left{width:50%;}
+.contact_right{width:50%; background-color:#dfceae}
+
+.contact_left{display:flex; flex-direction: column;}
+.contact_left_txt{}
+.contact_left_img{}
+.contact_left_img img{width:100%;}

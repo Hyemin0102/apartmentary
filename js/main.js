@@ -87,29 +87,33 @@ const swiper = new Swiper(".review_right", {
     });
 
     //모바일 메뉴 오픈
-    const header_mo = document.querySelector('header.mobile');
+/*     const header_mo = document.querySelector('header.mobile');
     console.log('클릭')
     const menuBtn = document.querySelectorAll('.gnb_btn');
-    //const body = document.querySelector('body'); 
+    
 
     menuBtn.forEach((el)=>{
         el.addEventListener('click',()=>{
             header_mo.classList.toggle('active');
-            console.log('클릭') 
+            console.log('클릭')
         })
-    })
+    }) */
 
 /*     window.addEventListener('scroll',()=>{
         if(window.scrollY > 40){
             header_mo.style.backgroundColor = "rgb(245, 245, 245)"
         } else { header_mo.style.backgroundColor = "transparent"}
-    }) */
-
- /*if(header_mo.classList.contains('active')){
+    }) 
+    //const body = document.querySelector('body'); 
+    if(header_mo.classList.contains('active')){
                 body.style.overflow = 'hidden';
             } else {
                 body.style.overflow = 'auto';
-            }*/
+            }
+    
+    
+    
+    */
 
 
 
