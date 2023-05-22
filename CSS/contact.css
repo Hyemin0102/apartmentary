@@ -14,3 +14,14 @@ background-size: 90%;
 .contact_left_txt {padding:50px 0;}
 .contact_left_txt >p:nth-child(1){font-size: 3rem; font-weight: bold; line-height: 1.5; margin-bottom: 15px;}
 
+.contact_inner{border:1px solid #000;}
+.contact_right .contact_inner h2 {font-size: 2.5rem; padding-bottom: 50px;}
+.contact_right .contact_inner .txtb {
+    margin: 10px 0;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;}
+    .txtb label{width:10%}
+    .txtb input {border-radius: 8px; outline: none ; border: 0.5px solid #A8A8A8; line-height: 30px; padding-left: 10px}
+    .txtb textarea {border-radius: 8px;  border: 0.5px solid #A8A8A8; outline: none }
+

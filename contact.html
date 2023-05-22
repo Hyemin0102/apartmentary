@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="CSS/reset.css">
         <link rel="stylesheet" href="CSS/basic.css">
         <link rel="stylesheet" href="CSS/contact.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script> -->
         <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="js/prefixfree.min.js"></script>
         <script defer type="module" src="js/main.js"></script>
@@ -69,8 +69,63 @@
                     <p>시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
                 </div>
             </div>
-            <div class="contact_right"></div>
-        
+            <div class="contact_right">
+                <div class="contact_inner">
+                    <h2>GET IN TOUCH</h2>
+                    <div class="txtb">
+                        <label for="#">이름</label>
+                        <input type="text" name="" value="" size=40 placeholder="고객님의 성함을 입력해주세요.">
+                    </div>
+
+                    <div class="txtb">
+                        <label for="#">이메일</label>
+                        <input type="email" name="" value="" size=40 placeholder="고객님의 이메일을 입력해주세요.">
+                    </div>
+
+                    <div class="txtb">
+                        <label for="#">연락처</label>
+                        <input type="text" name="" value="" size=40 placeholder="고객님의 휴대폰 번호를 입력해주세요.">
+                    </div>
+
+                    <div class="txtb">
+                        <label for="#">문의 사항 </label>
+                        <textarea name="" id="" cols="80" rows="10"></textarea>
+                    </div>
+                    <button>상담 신청</button>
+                </div>
+            </div>
     </section>
+<script>
+    const header_mo = document.querySelector('header.mobile');
+    console.log('클릭')
+    const menuBtn = document.querySelectorAll('.gnb_btn');
+    
+
+    menuBtn.forEach((el)=>{
+        el.addEventListener('click',()=>{
+            header_mo.classList.toggle('active');
+            console.log('클릭')
+        })
+    })
+
+    const swiper = new Swiper(".review_right", {
+    slidesPerView : 2, // 동시에 보여줄 슬라이드 갯수
+	spaceBetween : 20, // 슬라이드간 간격
+	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+	loopFillGroupWithBlank : true,// 그룹수가 맞지 않을 경우 빈칸으로 메우기
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+    },
+    breakpoints: {
+        // 화면의 넓이가 1200px 이상일 때
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        }
+    });
+    
+</script>
 </body>
 </html>
