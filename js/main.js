@@ -105,11 +105,11 @@ const swiper = new Swiper(".review_right", {
         })
     })
 
-    window.addEventListener('scroll',()=>{
+/*     window.addEventListener('scroll',()=>{
         if(window.scrollY > 40){
             header_mo.style.backgroundColor = "rgb(245, 245, 245)"
         } else { header_mo.style.backgroundColor = "transparent"}
-    })
+    }) */
 
 
 
