@@ -1,8 +1,4 @@
-const path = require('path');
-const products = require(path.join(__dirname, '..', 'portfolio.json'));
-
-
-//import products from "../portfolio.json" assert {type:'json'}
+import products from "../portfolio.json" assert {type:'json'}
 //console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
 
 
@@ -114,10 +110,27 @@ const swiper = new Swiper(".review_right", {
             } else {
                 body.style.overflow = 'auto';
             }
-    
-    
-    
     */
+
+    const storeBtn = document.querySelector('.contactStore_btn');
+    const storeList = document.querySelector('.contactStore_list');
+
+
+    storeBtn.addEventListener('click',()=>{
+        storeList.classList.add('active');
+        })
+        storeList.addEventListener('click',()=>{
+            storeList.classList.remove('active');
+            })
+
+    
+
+
+
+
+
+
+
 
 
 

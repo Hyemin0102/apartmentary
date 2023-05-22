@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="CSS/reset.css">
         <link rel="stylesheet" href="CSS/basic.css">
         <link rel="stylesheet" href="CSS/contact.css">
+
 <!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script> -->
         <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -62,38 +63,64 @@
             <div class="gnb_bottom"></div>
         </div>
     </header>
-    <section class="contact_wrap">
-            <div class="contact_left">
-                <div class="contact_left_txt">
-                    <p>인테리어 상담,<br> 부담스러워 하지 마세요.</p>
-                    <p>시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
+    <section class="contact">
+        <div class="contact_wrap">
+                <div class="contact_left">
+                    <div class="contact_left_txt">
+                        <p>인테리어 상담,<br> 부담스러워 하지 마세요.</p>
+                        <p>시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="contact_right">
-                <div class="contact_inner">
-                    <h2>GET IN TOUCH</h2>
-                    <div class="txtb">
-                        <label for="#">이름</label>
-                        <input type="text" name="" value="" size=40 placeholder="고객님의 성함을 입력해주세요.">
-                    </div>
+                <div class="contact_right">
+                    <div class="contact_inner">
+                        <h2>GET IN TOUCH</h2>
+                        <form action="#">
+                            <fieldset>
+                                <div class="txtb">
+                                    <label for="#">Name</label>
+                                    <input type="text"size=40 placeholder="Enter your Name">
+                                </div>
+                                <div class="txtb">
+                                    <label for="#">Email</label>
+                                    <input type="email"size=40 placeholder="Enter your Email">
+                                </div>
+                                <div class="txtb">
+                                    <label for="#">Phone number</label>
+                                    <input type="text" size=40 placeholder="Enter your Phone number">
+                                </div>
 
-                    <div class="txtb">
-                        <label for="#">이메일</label>
-                        <input type="email" name="" value="" size=40 placeholder="고객님의 이메일을 입력해주세요.">
-                    </div>
+                                <div class="txtb">
+                                    <label for="#">Message</label>
+                                    <textarea cols="70" rows="10"></textarea>
+                                </div>
 
-                    <div class="txtb">
-                        <label for="#">연락처</label>
-                        <input type="text" name="" value="" size=40 placeholder="고객님의 휴대폰 번호를 입력해주세요.">
-                    </div>
+                                <div class="txtb contactStore">
+                                    <label for="#">Contact store </label>
+                                    <div class="contactStore_wrap">
+                                        <input class="contactStore_btn" type="submit" value="----------------">
+                                        <ul class="contactStore_list">
+                                            <li>도산 본사</li>
+                                            <li>스포크 광교</li>
+                                            <li>스포크 광진</li>
+                                            <li>스포크 동탄</li>
+                                            <li>스포크 마곡</li>
+                                            <li>스포크 수지</li>
+                                            <li>스포크 송도</li>
+                                            <li>스포크 옥수</li>
+                                            <li>스포크 잠실</li>
+                                            <li>스포크 판교</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                    <div class="txtb">
-                        <label for="#">문의 사항 </label>
-                        <textarea name="" id="" cols="80" rows="10"></textarea>
+                                <div class="txtb sendEmail">
+                                    <input type="submit" value="Send E-mail">
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
-                    <button>상담 신청</button>
                 </div>
-            </div>
+        </div>
     </section>
 <!-- <script>
     const header_mo = document.querySelector('header.mobile');
