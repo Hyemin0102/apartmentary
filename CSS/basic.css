@@ -61,15 +61,21 @@ header.pc .inner .menu li > a {
   padding: 8px;
   transition: 0.3s;
 }
-header.pc .inner .menu li > a:hover::after {
+header.pc .inner .menu li > a::after {
   position: absolute;
   bottom: 4px;
   left: 0;
   content: "";
-  width: 100%;
+  width:0;
   height: 10px;
   background: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
 }
+header.pc .inner .menu li.on > a::after{
+  width:100%;
+}
+
+
 
 header.mobile {display:none; line-height: 40px;position: fixed;
   z-index: 10;
@@ -99,19 +105,14 @@ header.mobile .gnb_open {position: fixed; z-index: 999; top: 0; left: 0; right: 
 header.mobile .gnb_open .gnb_open_menu{padding: 20px;}
 
 header.mobile.active .gnb_open { transform: translateX(0);}
-header.mobile.active .gnb_open_menu {padding:30px 20px; overflow: auto;}
-header.mobile.active .gnb_open_menu > li {padding:20px;}
-header.mobile.active .gnb_open_menu > li > a {font-size: 36px; transition: 0.5s;}
+
+header.mobile.active .gnb_open_menu > li {padding:15px;}
+header.mobile.active .gnb_open_menu > li > a {font-size: 30px; transition: 0.5s; font-family:  "Roboto Slab";}
 
 header.mobile.active .gnb_bottom{height: 100%; background-color: #212121;}
 
 
 header.mobile.active .gnb_btn {position:relative; width:40px; height:40px; cursor: pointer;}
-
-.gnb_sub > li {padding:10px 0;}
-.gnb_sub > li > a {font-size: 22px; transition: 0.5s;}
-
-.gnb_open_menu > li:hover > a, .gnb_sub > li:hover > a {background: linear-gradient(45deg, #4e90d6 10%, #7807e9 100%); -webkit-background-clip: text; color: transparent;}
 
 
 h2, h3 {
@@ -643,11 +644,13 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
     font-size: 0.8rem;
   }
   /* sect_2 */
+  .sect_2 .sect_inner{padding: 50px 20px 0 20px}
   .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {font-size: 1rem;
   padding: 0 0 10px 0;}
-.sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {
-  font-size: 0.6rem;
-}
+  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap {top: 30%;}
+  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {
+  display: none;}
+
 
   /* sect_3 */
   .sect_3 {padding: 100px 0 50px 0;}

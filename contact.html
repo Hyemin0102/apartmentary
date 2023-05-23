@@ -5,9 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>아파트멘터리</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <link rel="stylesheet" href="CSS/reset.css">
         <link rel="stylesheet" href="CSS/basic.css">
@@ -23,11 +21,11 @@
 <body>
     <header class="pc">
         <div class="inner">
-            <h1><img src="./img/main_logo.svg" alt="main_logo"></h1>
+            <h1><a href="./index.html"><img src="./img/main_logo.svg" alt="main_logo"></a></h1>
             <ul class="menu">
                 <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">SERVICES</a></li>
                 <li><a href="#">POST</a></li>
+                <li><a href="#">REVIEW</a></li>
                 <li><a href="#">GET IN TOUCH</a></li>
             </ul>
         </div>
@@ -35,7 +33,7 @@
     <header class="mobile">
         <div class="inner">
             <h1 class="main_logo_mobile">
-                <a href="#">
+                <a href="./index.html">
                     <img src="./img/main_logo.svg" alt="메인로고">
                 </a>
             </h1>
@@ -56,9 +54,8 @@
             </div>
             <ul class="gnb_open_menu">
                 <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">SERVICES</a>
-                </li>
                 <li><a href="#">POST</a></li>
+                <li><a href="#">REVIEW</a></li>
                 <li><a href="#">GET IN TOUCH</a></li>
             </ul>
             <div class="gnb_bottom"></div>
@@ -66,59 +63,80 @@
     </header>
     <section class="contact">
         <div class="contact_wrap">
-                <div class="contact_left">
-                    <div class="contact_left_txt">
-                        <p>인테리어 상담,<br> 부담스러워 하지 마세요.</p>
-                        <p>시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
+                <div class="contact_top">
+                    <div class="contact_left">
+                        <div class="contact_left_txt">
+                            <p>인테리어 상담,<br> 부담스러워 하지 마세요.</p>
+                            <p>시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
+                        </div>
+                    </div>
+                    <div class="contact_right">
+                        <div class="contact_inner">
+                            <h2>GET IN TOUCH</h2>
+                            <form action="#" method="get">
+                                    <div class="txtb">
+                                        <label for="#">Name</label>
+                                        <input type="text" id="username" name="username" placeholder="Enter your Name" required>
+                                    </div>
+                                    <div class="txtb">
+                                        <label for="#">Email</label>
+                                        <input type="email" id="useremail" name="useremail" placeholder="Enter your Email" required>
+                                    </div>
+                                    <div class="txtb">
+                                        <label for="#">Phone number</label>
+                                        <input type="text" id="userphone" name="userphone" placeholder="Enter your Phone number" required>
+                                    </div>
+                                    <div class="txtb">
+                                        <label for="#">Message</label>
+                                        <textarea cols="70" id="message" name="message" rows="10" ></textarea>
+                                    </div>
+                                    <div class="txtb contactStore">
+                                        <label for="#">Contact store </label>
+                                        <div class="contactStore_wrap">
+                                            <input class="contactStore_btn" id="store" name="store" type="text" placeholder="choose store" required autocomplete="off">
+                                            <i class="fa-solid fa-sort-down"></i>
+                                            <ul class="contactStore_list">
+                                                <li>도산 본사</li>
+                                                <li>스포크 광교</li>
+                                                <li>스포크 광진</li>
+                                                <li>스포크 동탄</li>
+                                                <li>스포크 마곡</li>
+                                                <li>스포크 수지</li>
+                                                <li>스포크 송도</li>
+                                                <li>스포크 옥수</li>
+                                                <li>스포크 잠실</li>
+                                                <li>스포크 판교</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="txtb sendEmail">
+                                        <input type="submit" id="send" name="send" value="상담 신청하기">
+                                    </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="contact_right">
-                    <div class="contact_inner">
-                        <h2>GET IN TOUCH</h2>
-                        <form action="#">
-                            <fieldset>
-                                <div class="txtb">
-                                    <label for="#">Name</label>
-                                    <input type="text"size=40 placeholder="Enter your Name">
-                                </div>
-                                <div class="txtb">
-                                    <label for="#">Email</label>
-                                    <input type="email"size=40 placeholder="Enter your Email">
-                                </div>
-                                <div class="txtb">
-                                    <label for="#">Phone number</label>
-                                    <input type="text" size=40 placeholder="Enter your Phone number">
-                                </div>
-
-                                <div class="txtb">
-                                    <label for="#">Message</label>
-                                    <textarea cols="70" rows="10"></textarea>
-                                </div>
-
-                                <div class="txtb contactStore">
-                                    <label for="#">Contact store </label>
-                                    <div class="contactStore_wrap">
-                                        <input class="contactStore_btn" type="submit" value="----------------">
-                                        <ul class="contactStore_list">
-                                            <li>도산 본사</li>
-                                            <li>스포크 광교</li>
-                                            <li>스포크 광진</li>
-                                            <li>스포크 동탄</li>
-                                            <li>스포크 마곡</li>
-                                            <li>스포크 수지</li>
-                                            <li>스포크 송도</li>
-                                            <li>스포크 옥수</li>
-                                            <li>스포크 잠실</li>
-                                            <li>스포크 판교</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="txtb sendEmail">
-                                    <input type="submit" value="Send E-mail">
-                                </div>
-                            </fieldset>
-                        </form>
+                <div class="contact_bottom">
+                    <div class="inner">
+                        <h3>상담신청 내역</h3>
+                        <ul class="contact_list_wrap">
+                            <li class="contact_list_item main_list">
+                                <ul class="contact_list_item_inner">
+                                    <li id="contact_num">Number</li>
+                                    <li id="contact_message">Message</li>
+                                    <li id="contact_name">Name</li>
+                                    <li id="contact_date">Date</li>
+                                </ul>
+                            </li>
+                            <li class="contact_list_item">
+                                <ul class="contact_list_item_inner">
+                                    <li id="contact_num">1</li>
+                                    <li id="contact_message">안녕하세요</li>
+                                    <li id="contact_name">조혜민</li>
+                                    <li id="contact_date">2023-05-23</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
         </div>
