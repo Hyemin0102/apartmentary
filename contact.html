@@ -13,9 +13,10 @@
         <link rel="stylesheet" href="CSS/basic.css">
         <link rel="stylesheet" href="CSS/contact.css">
 
-<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script> -->
-        <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        
         <script src="js/prefixfree.min.js"></script>
         <script defer type="module" src="js/main.js"></script>
     </head>
@@ -123,6 +124,7 @@
         </div>
     </section>
 <!-- <script>
+//모바일 헤더 오픈
     const header_mo = document.querySelector('header.mobile');
     console.log('클릭')
     const menuBtn = document.querySelectorAll('.gnb_btn');
@@ -134,7 +136,7 @@
             console.log('클릭')
         })
     })
-
+//스와이퍼
     const swiper = new Swiper(".review_right", {
     slidesPerView : 2, // 동시에 보여줄 슬라이드 갯수
 	spaceBetween : 20, // 슬라이드간 간격
@@ -151,6 +153,34 @@
           spaceBetween: 20
         },
         }
+    });
+//GSAP 애니메이션
+let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
+    gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
+    
+    function animateElements(animateElements, onCompleteFn) {
+        gsap.to(animateElements[0], { duration: 1, opacity: 1, y: 0, repeat: 0, onComplete: onCompleteFn });
+    }
+    
+    function createScrollTrigger(triggerClass, animationElements, onCompleteFn) {
+        ScrollTrigger.create({
+            trigger: triggerClass,
+            start: "top center",
+            end: "bottom center",
+            onEnter: function() {animateElements(animationElements, onCompleteFn);},
+            onEnterBack: function() {animateElements(animationElements, onCompleteFn);
+            }
+        });
+    }
+    
+    let sect02_animatedElements = document.querySelectorAll('.animation2');
+    createScrollTrigger('.animation2scroll', sect02_animatedElements, function() {
+        gsap.to(sect02_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
+    });
+    
+    let sect03_animatedElements = document.querySelectorAll('.animation3');
+    createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
+        gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
     });
 
 </script> -->

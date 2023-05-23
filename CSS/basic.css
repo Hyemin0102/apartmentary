@@ -140,16 +140,16 @@ h2, h3 {
   font-family: "Roboto Slab";
 }
 .sect_1 .txt_wrap .txt_main {
-/*   opacity: 0;
-  transform: translateY(100px); */
+  opacity: 0;
+  transform: translateY(100px);
   font-size: 9.5vw;
   font-weight: 500;
   color: transparent;
   -webkit-text-stroke: 2px #000;
 }
 .sect_1 .txt_wrap .txt_sub_1, .sect_1 .txt_wrap .txt_sub_2 {
-/*   opacity: 0;
-  transform: translateY(100px); */
+  opacity: 0;
+  transform: translateY(100px);
   position: absolute;
   max-width: 400px;
   line-height: 1.5;
@@ -211,15 +211,15 @@ h2 {
   top: 30%;
 }
 .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {
-  /* opacity: 0;
-  transform: translateY(100px); */
+  opacity: 0;
+  transform: translateY(100px);
   font-size: 3.5rem;
   font-weight: 700;
   padding: 30px 0;
 }
 .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {
-/*   opacity: 0;
-  transform: translateY(100px); */
+  opacity: 0;
+  transform: translateY(100px);
   line-height: 1.5;
 }
 .sect_2 .sect_inner .sect_2_txt:nth-child(2) .txt_wrap {

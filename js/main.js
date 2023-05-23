@@ -1,4 +1,4 @@
-import products from "../portfolio.json" assert {type:'json'}
+/* import products from "../portfolio.json" assert {type:'json'}
 //console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
 
 
@@ -25,7 +25,7 @@ const creatItem = (targetArr) =>{
 }
 
 
-//클릭하는 변수 지정
+ //클릭하는 변수 지정
 let keywords = document.querySelectorAll('.keyword_wrap > li');
 keywords.forEach((el)=>{
     el.addEventListener('click',(e)=>{ //클릭하면 전체 class 일단 삭제하고 클릭한거에만 클라스 추가
@@ -37,7 +37,7 @@ keywords.forEach((el)=>{
 
             creatItem(targetArr);
     })
-});
+});  */
 
 
 const swiper = new Swiper(".review_right", {
@@ -58,7 +58,7 @@ const swiper = new Swiper(".review_right", {
         }
     });
 
-/*     let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
+    let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
     gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
     
     function animateElements(animateElements, onCompleteFn) {
@@ -84,7 +84,7 @@ const swiper = new Swiper(".review_right", {
     let sect03_animatedElements = document.querySelectorAll('.animation3');
     createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
         gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
-    }); */
+    });
 
     //모바일 메뉴 오픈
     const header_mo = document.querySelector('header.mobile');
@@ -112,6 +112,7 @@ const swiper = new Swiper(".review_right", {
             }
     */
 
+//컨택 지점 선택
     const storeBtn = document.querySelector('.contactStore_btn');
     const storeList = document.querySelector('.contactStore_list');
 
