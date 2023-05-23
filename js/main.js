@@ -1,6 +1,6 @@
 let products;
 
-fetch('../portfolio.json')
+fetch('./portfolio.json')
     .then(response => response.json())
     .then(data =>{ 
         products = data;
@@ -79,33 +79,37 @@ const swiper = new Swiper(".review_right", {
         }
     });
 
+
     let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
-    gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
-    
-    function animateElements(animateElements, onCompleteFn) {
-        gsap.to(animateElements[0], { duration: 1, opacity: 1, y: 0, repeat: 0, onComplete: onCompleteFn });
-    }
-    
-    function createScrollTrigger(triggerClass, animationElements, onCompleteFn) {
-        ScrollTrigger.create({
-            trigger: triggerClass,
-            start: "top center",
-            end: "bottom center",
-            onEnter: function() {animateElements(animationElements, onCompleteFn);},
-            onEnterBack: function() {animateElements(animationElements, onCompleteFn);
-            }
+
+    if (typeof gsap !== 'undefined'){
+        gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
+        
+        function animateElements(animateElements, onCompleteFn) {
+            gsap.to(animateElements[0], { duration: 1, opacity: 1, y: 0, repeat: 0, onComplete: onCompleteFn });
+        }
+        
+        function createScrollTrigger(triggerClass, animationElements, onCompleteFn) {
+            ScrollTrigger.create({
+                trigger: triggerClass,
+                start: "top center",
+                end: "bottom center",
+                onEnter: function() {animateElements(animationElements, onCompleteFn);},
+                onEnterBack: function() {animateElements(animationElements, onCompleteFn);
+                }
+            });
+        }
+        
+        let sect02_animatedElements = document.querySelectorAll('.animation2');
+        createScrollTrigger('.animation2scroll', sect02_animatedElements, function() {
+            gsap.to(sect02_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
+        });
+        
+        let sect03_animatedElements = document.querySelectorAll('.animation3');
+        createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
+            gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
         });
     }
-    
-    let sect02_animatedElements = document.querySelectorAll('.animation2');
-    createScrollTrigger('.animation2scroll', sect02_animatedElements, function() {
-        gsap.to(sect02_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
-    });
-    
-    let sect03_animatedElements = document.querySelectorAll('.animation3');
-    createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
-        gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
-    });
 
     //모바일 메뉴 오픈
     const header_mo = document.querySelector('header.mobile');
@@ -136,28 +140,32 @@ const swiper = new Swiper(".review_right", {
     */
 
 //컨택 지점 선택
+
+
     const storeBtn = document.querySelector('.contactStore_btn');
     const storeList = document.querySelector('.contactStore_list');
     const sendBtn = document.getElementById('send');
 
-    storeBtn.addEventListener('click',()=>{
-    storeList.classList.add('active');
-    })
-    storeList.addEventListener('click',()=>{
-            storeList.classList.remove('active');
-    })
+    if(storeBtn){
+        storeBtn.addEventListener('click',()=>{
+        storeList.classList.add('active');
+        })
+        storeList.addEventListener('click',()=>{
+                storeList.classList.remove('active');
+        })
 
-//지점 클릭했을때 해당 html 내용 string으로 가져오기
-const storeName = document.querySelectorAll('.contactStore_list > li');
-const storeInput = document.getElementById('store');
+    //지점 클릭했을때 해당 html 내용 string으로 가져오기
+    const storeName = document.querySelectorAll('.contactStore_list > li');
+    const storeInput = document.getElementById('store');
 
-storeName.forEach((el)=>{
-    el.addEventListener('click',()=>{
-    let storeNameTxt =  el.textContent;
-    storeInput.value = storeNameTxt;
-    storeInput.style.backgroundColor = "#E8F0FE";
+    storeName.forEach((el)=>{
+        el.addEventListener('click',()=>{
+        let storeNameTxt =  el.textContent;
+        storeInput.value = storeNameTxt;
+        storeInput.style.backgroundColor = "#E8F0FE";
+        })
     })
-})
+    }
 
 //sendBtn.addEventListener('click',()=>alert('상담신청이 정상적으로 접수되었습니다.'))
 
@@ -168,34 +176,36 @@ const contactListWrap = document.querySelector('.contact_list_wrap');
 let num = 0; //1씩 증가하는 함수
 const increase =()=>{num +=1;}
 
-form.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    increase();
+if(form){
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        increase();
 
-    //input의 value 구해오기
-    let username = document.getElementById('username').value;
-    let usermessage = document.getElementById('message').value;
-    
-    //li생성 함수
-    const createContact = document.createElement('li');
-    createContact.classList.add('contact_list_item');
-    //오늘 날짜 생성
-    let today = new Date();
-	let year = today.getFullYear();
-	let month = String(today.getMonth()+1).padStart(2,'0');
-	let day =  String(today.getDate()).padStart(2,'0');
+        //input의 value 구해오기
+        let username = document.getElementById('username').value;
+        let usermessage = document.getElementById('message').value;
+        
+        //li생성 함수
+        const createContact = document.createElement('li');
+        createContact.classList.add('contact_list_item');
+        //오늘 날짜 생성
+        let today = new Date();
+        let year = today.getFullYear();
+        let month = String(today.getMonth()+1).padStart(2,'0');
+        let day =  String(today.getDate()).padStart(2,'0');
 
-    createContact.innerHTML = `
-    <ul class="contact_list_item_inner">
-        <li id="contact_num">${num}</li>
-        <li id="contact_message">${usermessage}</li>
-        <li id="contact_name">${username}</li>
-        <li id="contact_date">${year}-${month}-${day}</li>
-    </ul>
-    `
-    contactListWrap.append(createContact);
-    form.reset();
-})
+        createContact.innerHTML = `
+        <ul class="contact_list_item_inner">
+            <li id="contact_num">${num}</li>
+            <li id="contact_message">${usermessage}</li>
+            <li id="contact_name">${username}</li>
+            <li id="contact_date">${year}-${month}-${day}</li>
+        </ul>
+        `
+        contactListWrap.append(createContact);
+        form.reset();
+    })
+}
 
 
 
