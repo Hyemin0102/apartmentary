@@ -1,5 +1,13 @@
-/* import products from "../portfolio.json" assert {type:'json'}
-//console.log('원래',products); //json 배열로 전체값 가져옴(전체 4가지 키값의 밸류)
+let products;
+
+fetch('../portfolio.json')
+    .then(response => response.json())
+    .then(data =>{ 
+        products = data;
+        console.log(products)
+    }
+        )
+    .catch(error=>console.log('Error',error));
 
 
 const creatItem = (targetArr) =>{
@@ -37,7 +45,7 @@ keywords.forEach((el)=>{
 
             creatItem(targetArr);
     })
-});  */
+}); 
 
 
 const swiper = new Swiper(".review_right", {
@@ -113,16 +121,18 @@ const swiper = new Swiper(".review_right", {
     */
 
 //컨택 지점 선택
+
     const storeBtn = document.querySelector('.contactStore_btn');
     const storeList = document.querySelector('.contactStore_list');
 
-
+if(storeBtn) { 
     storeBtn.addEventListener('click',()=>{
-        storeList.classList.add('active');
-        })
-        storeList.addEventListener('click',()=>{
+    storeList.classList.add('active');
+    })
+    storeList.addEventListener('click',()=>{
             storeList.classList.remove('active');
-            })
+    })
+}
 
     
 
