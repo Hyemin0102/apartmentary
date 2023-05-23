@@ -644,9 +644,11 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
     font-size: 0.8rem;
   }
   /* sect_2 */
-  .sect_2 .sect_inner{padding: 50px 20px 0 20px}
-  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {font-size: 1rem;
+  .sect_2 .sect_inner{padding: 50px 20px 0 20px; gap:10px;}
+  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {font-size: 1.1rem;
   padding: 0 0 10px 0;}
+  .sect_2 .sect_inner .sect_2_txt {flex: 50%;}
+  .sect_2 .sect_inner .sect_2_img {flex: 50%;}
   .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap {top: 30%;}
   .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {
   display: none;}
