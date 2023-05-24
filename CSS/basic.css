@@ -352,29 +352,23 @@ h2 {
   -webkit-text-stroke: 2px #000;
 }
 .sect_4 .sect_4_wrap h3 {
-  padding-left: 50px;
+  padding-left: 20px;
   font-size: 2.5vw;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap {
   display: flex;
-  padding: 50px;
+  padding: 10px 10px 20px 10px;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {
-  padding: 0 30px 0 10px;
-  line-height: 20px;
-  font-size:1.1rem;
+  padding: 8px 10px; line-height: 20px; ; margin: 10px;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li:hover {
-  font-weight: 700;
-  cursor: pointer;
+  font-weight: 700; cursor: pointer;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active {
-  position: relative;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 1.2rem;
+  font-weight: 700; cursor: pointer;
 }
-.sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active:before {
+/* .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active:before {
   position: absolute;
   right: 9px;
   top: 50%;
@@ -384,36 +378,37 @@ h2 {
   background: url("../img/check_mark.png") no-repeat;
   background-size: contain;
   transform: translateY(-50%);
-}
+} */
 .sect_4 .sect_4_wrap .portfolio_wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  padding-bottom: 100px;
 }
-.sect_4 .sect_4_wrap .portfolio_wrap > div {
-  width: 330px;
-  transition: 0.3s;
-}
-.sect_4 .sect_4_wrap .portfolio_wrap > div:hover {
+
+.sect_4 .sect_4_wrap .portfolio_wrap .swiper-slide:hover .portfolio_img img {
   transform: scale(1.1);
 }
 .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_img {
   height: 260px;
+  overflow: hidden;
 }
 .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  transition: 0.5s;
 }
 .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt {
   background: white;
-  padding: 10px 5px 20px;
+  padding: 20px;
 }
 .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_name {
   font-size: 1.3rem;
   font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_info {
   font-size: 0.9rem;
@@ -423,10 +418,11 @@ h2 {
   white-space: nowrap;
 }
 
+.portfolio_wrap .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{bottom:-35px;}
+
 .sect_5 {
   height: 100%;
   padding: 100px 0;
-  margin: 200px 0;
   background-color: #dfceae;
 }
 .sect_5 .inner {
@@ -493,7 +489,7 @@ h2 {
   font-size: 1.4rem;
   color: #a8a3a3;
 }
-
+.swiper.review_right .swiper-slide .review_card .review_star{padding:10px 0;}
 .swiper.review_right .swiper-slide .review_card .review_star span {
   position: relative;
   display: inline-block;
@@ -516,7 +512,7 @@ h2 {
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   line-height: 1.3em;
-  margin: 20px 0;
+  padding-top: 15px
 }
 .swiper.review_right .swiper-scrollbar {
   bottom: 0;
@@ -632,6 +628,7 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
   footer .footer_wrap .footer_right .footer_right_top {margin-right: 0;}
 }
 
+/*** Mobile ***/
 @media (max-width:767px){
   /* header */
   header.pc{display:none;}
@@ -644,18 +641,32 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
     font-size: 0.8rem;
   }
   /* sect_2 */
-  .sect_2 .sect_inner{padding: 50px 20px 0 20px; gap:10px;}
-  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {font-size: 1.1rem;
-  padding: 0 0 10px 0;}
-  .sect_2 .sect_inner .sect_2_txt {flex: 50%;}
-  .sect_2 .sect_inner .sect_2_img {flex: 50%;}
-  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap {top: 30%;}
+  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_top {font-size: 1.3rem;
+  padding: 0 0 20px 0;}
+  .sect_2 .sect_inner .sect_2_txt {padding: 30px 0;}
+  .sect_2 {
+    height: auto;
+  }
+  .sect_2 .sect_inner {
+    display: block;
+    padding: 100px 20px;
+    
+  }
+ 
+  .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap {
+    position: unset;
+  }
+
   .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {
-  display: none;}
+   font-size: 0.7rem;
+  }
+
+
+  
 
 
   /* sect_3 */
-  .sect_3 {padding: 100px 0 50px 0;}
+  .sect_3 {padding: 0 0 50px 0;}
   .sect_3 .bg_2 {left:0;}
   .sect_3 h2 {
     color: #000;
@@ -675,21 +686,35 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
     font-weight: 700;
     font-size: 2.5rem;
   }
-  .sect_4 .sect_4_wrap h3{padding: 20px 0; font-size: 1.3rem;}
-  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap {padding: 10px;justify-content: auto;}
-  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {padding: 0 8px;font-size: 0.7rem;}
+  .sect_4 .sect_4_wrap h3{padding: 15px 0; font-size: 1.3rem;}
+  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap {padding: 0;justify-content: auto;}
+  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {padding: 8px; font-size: 0.7rem; }
   .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active {
-    font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
-  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active:before{display: none;}
+
+  .sect_4 .sect_4_wrap .portfolio_wrap{justify-content: unset;}
+  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_img{height: auto;}
+  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_name{font-size: 0.9rem;}
+  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_info{font-size: 0.8rem;}
+
     /* sect_5 */
   .sect_5{margin:50px 0; padding:20px 0}
   .sect_5 .inner{display: block;}
   .sect_5 .inner .review_left h2 {font-size: 2.5rem; padding-bottom: 20px;}
   .sect_5 .inner .review_left .review_more{margin:20px;}
 
-  .swiper.review_right .swiper-slide {min-height: 300px;}
+  .swiper.review_right .swiper-slide {
+    margin: 20px 0;
+    min-height: 200px; 
+  }
+  .swiper.review_right .swiper-slide .review_card .review_content{-webkit-line-clamp: 5; padding:0; font-size: 0.8rem;}
+  .swiper.review_right .swiper-slide .review_card .review_star span{width:15px; height:16px}
+  .swiper.review_right .swiper-slide .review_card .review_star span::after,   .swiper.review_right .swiper-slide .review_card .review_name {font-size: 0.8rem;}
+ 
+
+
+
   /* footer */
   footer .footer_wrap{display:block;  min-height: auto;}
   footer .footer_wrap .footer_left{padding-left: 0;}

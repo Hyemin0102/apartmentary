@@ -60,9 +60,8 @@ headerMenu.forEach((el)=>{
     })
 })
 
-
-const swiper = new Swiper(".review_right", {
-    slidesPerView : 2, // 동시에 보여줄 슬라이드 갯수
+let swiper = new Swiper(".review_right", {
+    slidesPerView : 3, // 동시에 보여줄 슬라이드 갯수
 	spaceBetween : 20, // 슬라이드간 간격
 	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
 	loopFillGroupWithBlank : true,// 그룹수가 맞지 않을 경우 빈칸으로 메우기
@@ -70,14 +69,88 @@ const swiper = new Swiper(".review_right", {
         el: ".swiper-scrollbar",
         hide: false,
     },
-    breakpoints: {
+    /* breakpoints: {
         // 화면의 넓이가 1200px 이상일 때
         1200: {
         slidesPerView: 3,
         spaceBetween: 20
         },
-        }
+        } */
     });
+
+
+    let swiper2 = new Swiper(".portfolio_wrap", {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 20,
+        slidesPerGroupSkip: 3,
+       /*  pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        }, */
+      });
+
+
+/* let swiper;
+let swiper2;
+
+//swiper 초기값 함수
+const initSwiper=()=>{
+    const windowWidth = window.innerWidth;
+
+    //모바일이 아닌 경우
+    if(windowWidth >= 768){
+        swiper = new Swiper(".review_right", {
+            slidesPerView : 2, 
+            spaceBetween : 20, 
+            slidesPerGroup : 2, 
+            loopFillGroupWithBlank : true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            breakpoints: {
+                // 화면의 넓이가 1200px 이상일 때
+                1200: {
+                slidesPerView: 3,
+                spaceBetween: 20
+                },
+                }
+            });
+    }else{//모바일인 경우 review Swiper 와 portfolio swiper 초기 값
+        swiper = new Swiper(".review_right", {
+            slidesPerView : 2, 
+            spaceBetween : 20, 
+            slidesPerGroup : 2, 
+            loopFillGroupWithBlank : true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            }
+            });
+    }
+};
+
+const portfolioSwiper=()=>{
+    swiper2 = new Swiper(".portfolio_wrap", {
+        slidesPerView : 2, 
+        spaceBetween : 10, 
+        slidesPerGroup : 2, 
+        loopFillGroupWithBlank : true,
+        });
+};
+
+initSwiper(); //페이지 로드 시 swiper 초기화
+
+window.addEventListener('resize',()=>{  //riseze시 이 전 swiper값 모두 없애고 swiper 초기값 설정 
+    if(swiper2){
+        swiper2.destroy(true,true);
+    }
+    initSwiper();
+});   */
+
+
+
 
 
     let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
@@ -173,7 +246,7 @@ const swiper = new Swiper(".review_right", {
 const form = document.querySelector('form');
 const contactListWrap = document.querySelector('.contact_list_wrap');
 
-let num = 0; //1씩 증가하는 함수
+let num = 1; //1씩 증가하는 함수
 const increase =()=>{num +=1;}
 
 if(form){
