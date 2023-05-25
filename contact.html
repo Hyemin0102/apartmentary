@@ -66,8 +66,8 @@
                 <div class="contact_top">
                     <div class="contact_left">
                         <div class="contact_left_txt">
-                            <p>인테리어 상담,<br> 부담스러워 하지 마세요.</p>
-                            <p>시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
+                            <p class="contact_trigger">인테리어 상담,<br> 부담스러워 하지 마세요.</p>
+                            <p class="contact_trigger">시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
                         </div>
                     </div>
                     <div class="contact_right">
@@ -76,7 +76,7 @@
                             <form action="#" method="get">
                                     <div class="txtb">
                                         <label for="#">Name</label>
-                                        <input type="text" id="username" name="username" placeholder="Enter your Name" required>
+                                        <input type="text" id="username" name="username" value="" placeholder="Enter your Name" required>
                                     </div>
                                     <div class="txtb">
                                         <label for="#">Email</label>
@@ -84,16 +84,16 @@
                                     </div>
                                     <div class="txtb">
                                         <label for="#">Phone number</label>
-                                        <input type="text" id="userphone" name="userphone" placeholder="Enter your Phone number" required>
+                                        <input type="text" id="userphone" name="userphone" placeholder="Enter your Phone number"required >
                                     </div>
                                     <div class="txtb">
                                         <label for="#">Message</label>
-                                        <textarea cols="70" id="message" name="message" rows="10" ></textarea>
+                                        <textarea cols="70" id="message" name="message" rows="10" required></textarea>
                                     </div>
                                     <div class="txtb contactStore">
                                         <label for="#">Contact store </label>
                                         <div class="contactStore_wrap">
-                                            <input class="contactStore_btn" id="store" name="store" type="text" placeholder="choose store" required autocomplete="off">
+                                            <input class="contactStore_btn" id="store" name="store" type="text" placeholder="choose store"  autocomplete="off" required>
                                             <i class="fa-solid fa-sort-down"></i>
                                             <ul class="contactStore_list">
                                                 <li>도산 본사</li>
@@ -120,15 +120,13 @@
                     <div class="inner">
                         <h3>상담신청 내역</h3>
                         <ul class="contact_list_wrap">
-                            <li class="contact_list_item main_list">
-                                <ul class="contact_list_item_inner">
+                            <li class="contact_list_item">
+                                <ul class="contact_list_item_inner main_list">
                                     <li id="contact_num">Number</li>
                                     <li id="contact_message">Message</li>
                                     <li id="contact_name">Name</li>
                                     <li id="contact_date">Date</li>
                                 </ul>
-                            </li>
-                            <li class="contact_list_item">
                                 <ul class="contact_list_item_inner">
                                     <li id="contact_num">1</li>
                                     <li id="contact_message">안녕하세요</li>
@@ -136,11 +134,71 @@
                                     <li id="contact_date">2023-05-23</li>
                                 </ul>
                             </li>
+
+                            <li class="createList_fuc">
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>
+
         </div>
     </section>
+    <footer>
+        <div class="footer_wrap">
+            <div class="footer_left">
+                <a href="#"><img src="./img/footer_logo.svg" alt=""></a>
+            </div>
+            <div class="footer_right">
+                <div class="footer_right_top">
+                    <div class="footer_right_cont">
+                        <h4>정보</h4>
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">아파트멘터리 브랜드</a></li>
+                            <li><a href="#">아파트멘터리 파츠</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_right_cont">
+                        <h4>안내</h4>
+                        <ul>
+                            <li><a href="#">가까운 직영점</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li>
+                                <span><a href="#"><img src="./img/footer_blog.svg" alt=""></a></span>
+                                <span><a href="#"><img src="./img/footer_insta.svg" alt=""></a></span>
+                            </li>
+                        </ul>rt
+                    </div>
+                    <div class="footer_right_cont">
+                        <h4>고객센터</h4>
+                        <ul>
+                            <li><a href="#">전화번호 | 02-6356-1224</a></li>
+                            <li><a href="#">영업시간 | 평일 10:00~19:00(공휴일 제외)</a></li>
+                            <li><a href="#">ASK@APARTMENTARY.COM</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">서비스 후기작성</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_right_bottom">
+                    <div>
+                        이용약관 | 개인정보처리방침
+                    </div>
+                    <div>
+                        <p>
+                            · 법인명: 아파트멘터리(주) · 대표자: 윤소연, 김준영 · 사업자 등록번호: 723-87-00195· 통신판매업 신고: 제 2016-서울마포-0923호·
+                            개인정보관리책임자: 황은미(mia@apartmentary.com)· 주소: 서울특별시 강남구 도산대로 237 3,4F · 02-6356-1224
+                        </p>
+                        <p>
+                            © 2015-2022 All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

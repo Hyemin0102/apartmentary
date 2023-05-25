@@ -9,13 +9,15 @@ fetch('./portfolio.json')
         )
     .catch(error=>console.log('Error',error));
 
+let portfolios;
 
 const creatItem = (targetArr) =>{
-    const portfolioWrap = document.querySelector('.portfolio_wrap');
+    const portfolioWrap = document.querySelector('.portfolio_slide_wrap');
     portfolioWrap.innerHTML = ""; //함수 실행 시 일단 innerHTML 넣어준 값 초기화
 
     targetArr.map((el)=>{
-        const portfolios = document.createElement('div');
+        portfolios = document.createElement('div');
+        portfolios.classList.add('swiper-slide');
         portfolios.innerHTML = `
                     <a href="#">
                         <div class="portfolio_img active">
@@ -33,6 +35,37 @@ const creatItem = (targetArr) =>{
 }
 
 
+let swiper = new Swiper(".review_right", {
+    slidesPerView : 2, // 동시에 보여줄 슬라이드 갯수
+	spaceBetween : 20, // 슬라이드간 간격
+	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+	loopFillGroupWithBlank : true,// 그룹수가 맞지 않을 경우 빈칸으로 메우기
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+    },
+    breakpoints: {
+        1200: {
+          slidesPerView: 3,  //브라우저가 768보다 클 때
+          spaceBetween: 20,
+        },
+    }
+});
+
+
+    let swiper2 = new Swiper(".portfolio_wrap", {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 20,
+        
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        }
+    });
+
+
+    
  //클릭하는 변수 지정
 let keywords = document.querySelectorAll('.keyword_wrap > li');
 keywords.forEach((el)=>{
@@ -44,6 +77,8 @@ keywords.forEach((el)=>{
             let targetArr = products[targetId]; //targetId의 배열값
 
             creatItem(targetArr);
+            swiper2.appendSlide(portfolios);
+            swiper2.update();
     })
 }); 
 
@@ -60,129 +95,45 @@ headerMenu.forEach((el)=>{
     })
 })
 
-let swiper = new Swiper(".review_right", {
-    slidesPerView : 3, // 동시에 보여줄 슬라이드 갯수
-	spaceBetween : 20, // 슬라이드간 간격
-	slidesPerGroup : 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
-	loopFillGroupWithBlank : true,// 그룹수가 맞지 않을 경우 빈칸으로 메우기
-    scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: false,
-    },
-    /* breakpoints: {
-        // 화면의 넓이가 1200px 이상일 때
-        1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-        },
-        } */
-    });
 
 
-    let swiper2 = new Swiper(".portfolio_wrap", {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 20,
-        slidesPerGroupSkip: 3,
-       /*  pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        }, */
-      });
+/*** GSAP ***/
+gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined'){
+let contactAnimate = document.querySelectorAll('.contact_trigger');
+gsap.fromTo(contactAnimate,{opacity: 0, y: 100},{duration:1, opacity:1, y:0,stagger:0.5});
+}
+
+let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
+gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
+
+//scrolltrigger 만들기
+const sect02TxtTop = document.querySelector('.sect_2_txt_top');
+const sect02TxtBottom = document.querySelector('.sect_2_txt_bottom');
+const sect03TxtTop = document.querySelector('.sect_3_txt_top');
+const sect03TxtBottom = document.querySelector('.sect_3_txt_bottom');
 
 
-/* let swiper;
-let swiper2;
-
-//swiper 초기값 함수
-const initSwiper=()=>{
-    const windowWidth = window.innerWidth;
-
-    //모바일이 아닌 경우
-    if(windowWidth >= 768){
-        swiper = new Swiper(".review_right", {
-            slidesPerView : 2, 
-            spaceBetween : 20, 
-            slidesPerGroup : 2, 
-            loopFillGroupWithBlank : true,
-            scrollbar: {
-                el: ".swiper-scrollbar",
-                hide: false,
-            },
-            breakpoints: {
-                // 화면의 넓이가 1200px 이상일 때
-                1200: {
-                slidesPerView: 3,
-                spaceBetween: 20
-                },
-                }
-            });
-    }else{//모바일인 경우 review Swiper 와 portfolio swiper 초기 값
-        swiper = new Swiper(".review_right", {
-            slidesPerView : 2, 
-            spaceBetween : 20, 
-            slidesPerGroup : 2, 
-            loopFillGroupWithBlank : true,
-            scrollbar: {
-                el: ".swiper-scrollbar",
-                hide: false,
-            }
-            });
-    }
-};
-
-const portfolioSwiper=()=>{
-    swiper2 = new Swiper(".portfolio_wrap", {
-        slidesPerView : 2, 
-        spaceBetween : 10, 
-        slidesPerGroup : 2, 
-        loopFillGroupWithBlank : true,
-        });
-};
-
-initSwiper(); //페이지 로드 시 swiper 초기화
-
-window.addEventListener('resize',()=>{  //riseze시 이 전 swiper값 모두 없애고 swiper 초기값 설정 
-    if(swiper2){
-        swiper2.destroy(true,true);
-    }
-    initSwiper();
-});   */
-
-
-
-
-
-    let animatedElements = document.querySelectorAll('.txt_main, .txt_sub_1, .txt_sub_2');
-
-    if (typeof gsap !== 'undefined'){
-        gsap.fromTo(animatedElements, { opacity: 0, y: 100 }, { duration: 1, opacity: 1, y: 0, stagger: 0.5 });
-        
-        function animateElements(animateElements, onCompleteFn) {
-            gsap.to(animateElements[0], { duration: 1, opacity: 1, y: 0, repeat: 0, onComplete: onCompleteFn });
+function triggerFuc(el,triggerValue){
+    gsap.fromTo(
+        el,
+        {opacity:0, y:100}, 
+        {opacity:1, y:0,duration:1,
+        scrollTrigger:{
+            trigger: triggerValue,
+            start:"top center",
+            toggleActions: "play none none reset"
         }
-        
-        function createScrollTrigger(triggerClass, animationElements, onCompleteFn) {
-            ScrollTrigger.create({
-                trigger: triggerClass,
-                start: "top center",
-                end: "bottom center",
-                onEnter: function() {animateElements(animationElements, onCompleteFn);},
-                onEnterBack: function() {animateElements(animationElements, onCompleteFn);
-                }
-            });
         }
-        
-        let sect02_animatedElements = document.querySelectorAll('.animation2');
-        createScrollTrigger('.animation2scroll', sect02_animatedElements, function() {
-            gsap.to(sect02_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
-        });
-        
-        let sect03_animatedElements = document.querySelectorAll('.animation3');
-        createScrollTrigger('.animation3scroll', sect03_animatedElements, function() {
-            gsap.to(sect03_animatedElements[1], { duration: 1, opacity: 1, y: 0 });
-        });
-    }
+    );
+}
+
+triggerFuc(sect02TxtTop,'.sect_2_txt');
+triggerFuc(sect02TxtBottom, '.sect_2_txt_wrap');
+
+triggerFuc(sect03TxtTop, '.sect_3_txt');
+triggerFuc(sect03TxtBottom, '.sect_3_txt_wrap');
+
 
     //모바일 메뉴 오픈
     const header_mo = document.querySelector('header.mobile');
@@ -213,8 +164,6 @@ window.addEventListener('resize',()=>{  //riseze시 이 전 swiper값 모두 없
     */
 
 //컨택 지점 선택
-
-
     const storeBtn = document.querySelector('.contactStore_btn');
     const storeList = document.querySelector('.contactStore_list');
     const sendBtn = document.getElementById('send');
@@ -240,51 +189,90 @@ window.addEventListener('resize',()=>{  //riseze시 이 전 swiper값 모두 없
     })
     }
 
-//sendBtn.addEventListener('click',()=>alert('상담신청이 정상적으로 접수되었습니다.'))
+
+
 
 //문의글 li 추가
 const form = document.querySelector('form');
-const contactListWrap = document.querySelector('.contact_list_wrap');
+const contactListWrap = document.querySelector('.createList_fuc');
 
-let num = 1; //1씩 증가하는 함수
-const increase =()=>{num +=1;}
 
-if(form){
-    form.addEventListener('submit',(e)=>{
-        e.preventDefault();
-        increase();
+//로컬 스토리지에서 문자열 가져와서 객체로 변환
+//contactListItem에서 로컬스토리지 저장 값 가져와서 변수에 할당
+//할당값이 없으면 null이 안뜨도록 배열 초기화 해주고, null이 아닌 경우 값 할당
 
-        //input의 value 구해오기
-        let username = document.getElementById('username').value;
-        let usermessage = document.getElementById('message').value;
-        
-        //li생성 함수
-        const createContact = document.createElement('li');
+
+/* let aa = localStorage.getItem('contact');
+if(aa){
+    JSON.parse(aa);
+} else {
+    aa=[];
+} */
+
+const username = document.getElementById('username');
+const usermessage = document.getElementById('message');
+
+let contactListItem = JSON.parse(localStorage.getItem('contact')) || [];
+//console.log('dd',contactListItem)
+
+//문자열로 변경한것을 로컬스토리지에 저장
+const save =()=>{
+    //console.log('save');
+    localStorage.setItem('contact',JSON.stringify(contactListItem));
+}
+
+//로컬스토리지 저장하고 list 만들어주는 함수
+const localItem = ()=>{
+    const contactObj = {
+        user: username.value,
+        msg:usermessage.value
+    };
+
+    contactListItem.push(contactObj);
+    //console.log('dd222',contact)
+
+    save();
+    createList();
+    form.reset();
+    alert('상담신청이 정상적으로 접수되었습니다. 아래 신청 내역에서 접수 내역을 확인해 주시기 바랍니다.')
+}
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault(e);
+    localItem();
+})
+
+//로컬스토리지에 저장된값 가져와서 List 생성
+const createList = ()=>{
+    contactListWrap.innerHTML = ''; // 기존의 요소들을 모두 삭제, 안하면 중복으로 li생성됨
+
+    contactListItem.forEach((el)=>{
+        const createContact = document.createElement('div');
         createContact.classList.add('contact_list_item');
+    
+        let num = 1; //1씩 증가하는 함수
+        const increase =()=>{num +=1;}
+    
         //오늘 날짜 생성
         let today = new Date();
         let year = today.getFullYear();
         let month = String(today.getMonth()+1).padStart(2,'0');
         let day =  String(today.getDate()).padStart(2,'0');
-
+        
         createContact.innerHTML = `
         <ul class="contact_list_item_inner">
-            <li id="contact_num">${num}</li>
-            <li id="contact_message">${usermessage}</li>
-            <li id="contact_name">${username}</li>
+            <li id="contact_num">1</li>
+            <li id="contact_message">${el.msg}</li>
+            <li id="contact_name">${el.user}</li>
             <li id="contact_date">${year}-${month}-${day}</li>
         </ul>
         `
         contactListWrap.append(createContact);
-        form.reset();
+        
     })
 }
 
-
-
-
-
-
+createList();
 
 
 

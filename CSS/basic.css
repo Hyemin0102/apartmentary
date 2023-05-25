@@ -107,6 +107,9 @@ header.mobile .gnb_open .gnb_open_menu{padding: 20px;}
 header.mobile.active .gnb_open { transform: translateX(0);}
 
 header.mobile.active .gnb_open_menu > li {padding:15px;}
+header.mobile.active .gnb_open_menu > li:nth-child(4) {border: 1px solid #000;
+  display: inline-block;
+  border-radius: 50%;}
 header.mobile.active .gnb_open_menu > li > a {font-size: 30px; transition: 0.5s; font-family:  "Roboto Slab";}
 
 header.mobile.active .gnb_bottom{height: 100%; background-color: #212121;}
@@ -357,7 +360,7 @@ h2 {
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap {
   display: flex;
-  padding: 10px 10px 20px 10px;
+  padding: 10px;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {
   padding: 8px 10px; line-height: 20px; ; margin: 10px;
@@ -366,28 +369,41 @@ h2 {
   font-weight: 700; cursor: pointer;
 }
 .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active {
-  font-weight: 700; cursor: pointer;
+  font-weight: 700; cursor: pointer; border-bottom: 2px solid;
 }
-/* .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active:before {
-  position: absolute;
-  right: 9px;
-  top: 50%;
-  content: "";
-  width: 18px;
-  height: 18px;
-  background: url("../img/check_mark.png") no-repeat;
-  background-size: contain;
-  transform: translateY(-50%);
-} */
+
 .sect_4 .sect_4_wrap .portfolio_wrap {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 100px;
+  width:100%;
+  height:400px;
 }
+
+.sect_4 .sect_4_wrap .portfolio_wrap .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sect_4 .sect_4_wrap .portfolio_wrap .swiper-slide a {display:block;width:100%; height:100%;}
 
 .sect_4 .sect_4_wrap .portfolio_wrap .swiper-slide:hover .portfolio_img img {
   transform: scale(1.1);
 }
+
+.portfolio_wrap .swiper-horizontal>.swiper-pagination-progressbar, .portfolio_wrap .swiper-pagination-progressbar.swiper-pagination-horizontal{
+  top:auto; bottom: 0;
+}
+
+.portfolio_wrap .swiper-pagination-progressbar {
+  background: rgba(0,0,0,0.2);
+ }
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:#eba21c;}
+
+
+
+
+
 .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_img {
   height: 260px;
   overflow: hidden;
@@ -418,7 +434,7 @@ h2 {
   white-space: nowrap;
 }
 
-.portfolio_wrap .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{bottom:-35px;}
+
 
 .sect_5 {
   height: 100%;
@@ -688,26 +704,29 @@ footer .footer_wrap .footer_right .footer_right_bottom p:nth-child(1) {
   }
   .sect_4 .sect_4_wrap h3{padding: 15px 0; font-size: 1.3rem;}
   .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap {padding: 0;justify-content: auto;}
-  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {padding: 8px; font-size: 0.7rem; }
+  .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li {padding: 8px; font-size: 0.7rem; margin: 0; }
   .sect_4 .sect_4_wrap .sect_4_inner .keyword_wrap li.active {
     font-size: 0.7rem;
   }
 
-  .sect_4 .sect_4_wrap .portfolio_wrap{justify-content: unset;}
+  .sect_4 .sect_4_wrap .portfolio_wrap{justify-content: unset; height: 150px;}
   .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_img{height: auto;}
-  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_name{font-size: 0.9rem;}
-  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_info{font-size: 0.8rem;}
+  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt {padding:10px;}
+  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_name{font-size: 0.8rem;}
+  .sect_4 .sect_4_wrap .portfolio_wrap .portfolio_txt .portfolio_txt_info{font-size: 0.7rem; padding-top: 10px;}
 
     /* sect_5 */
   .sect_5{margin:50px 0; padding:20px 0}
   .sect_5 .inner{display: block;}
-  .sect_5 .inner .review_left h2 {font-size: 2.5rem; padding-bottom: 20px;}
-  .sect_5 .inner .review_left .review_more{margin:20px;}
+  .sect_5 .inner .review_left h2 {font-size: 2rem; padding-bottom: 20px;}
+  .sect_5 .inner .review_left .review_more{margin:10px;}
 
   .swiper.review_right .swiper-slide {
     margin: 20px 0;
     min-height: 200px; 
   }
+
+  .sect_5 .inner .review_left .review_more a{padding: 5px 10px;}
   .swiper.review_right .swiper-slide .review_card .review_content{-webkit-line-clamp: 5; padding:0; font-size: 0.8rem;}
   .swiper.review_right .swiper-slide .review_card .review_star span{width:15px; height:16px}
   .swiper.review_right .swiper-slide .review_card .review_star span::after,   .swiper.review_right .swiper-slide .review_card .review_name {font-size: 0.8rem;}
