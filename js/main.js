@@ -54,13 +54,18 @@ let swiper = new Swiper(".review_right", {
 
 
     let swiper2 = new Swiper(".portfolio_wrap", {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
         spaceBetween: 20,
-        
         pagination: {
             el: ".swiper-pagination",
             type: "progressbar",
+        },
+        breakpoints: {
+            768: {
+              slidesPerView: 3,  //브라우저가 768보다 클 때
+              spaceBetween: 20,
+            },
         }
     });
 
@@ -122,7 +127,7 @@ function triggerFuc(el,triggerValue){
         scrollTrigger:{
             trigger: triggerValue,
             start:"top center",
-            toggleActions: "play none none reset"
+            toggleActions: "play pause none reset"
         }
         }
     );
