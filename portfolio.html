@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="CSS/reset.css">
         <link rel="stylesheet" href="CSS/basic.css">
         <link rel="stylesheet" href="CSS/contact.css">
+        <link rel="stylesheet" href="CSS/portfolio.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -64,81 +65,53 @@
             <div class="gnb_bottom"></div>
         </div>
     </header>
-    <section class="contact">
-        <div class="contact_wrap">
-                <div class="contact_top">
-                    <div class="contact_left">
-                        <div class="contact_left_txt">
-                            <p class="contact_trigger">인테리어 상담,<br> 부담스러워 하지 마세요.</p>
-                            <p class="contact_trigger">시작부터 끝까지 투명하고 편리한 아파트멘터리 서비스가 있으니까요.</p>
+    <section class="sect_portfolio">
+        <div class="sect_portfolio_inner">
+            <div class="sect_portfolio_inner_top">
+                <div class="sect_portfolio_left">
+                    <div class="top_img_wrap">
+                        <img id="changeimg" src="./img/portfolio_detail_after.jpg" alt="portfolio_after">
+                    </div>
+                    <div class="change_btn_wrap">
+                        <div class="change_btn_inner">
+                            <div class="change_btn_on">
+                                <span class="change_before_box"></span>
+                            </div>
+                            <div class="change_btn_txt">
+                                <p class="change_before_txt">Before</p>
+                                <p class="change_after_txt">After</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact_right">
-                        <div class="contact_inner">
-                            <h2>GET IN TOUCH</h2>
-                            <form action="#" method="get" id="form">
-                                    <div class="txtb">
-                                        <label for="#">Name</label>
-                                        <input type="text" id="username" name="username" value="" placeholder="Enter your Name" required>
-                                    </div>
-                                    <div class="txtb">
-                                        <label for="#">Email</label>
-                                        <input type="email" id="useremail" name="useremail" placeholder="Enter your Email" required>
-                                    </div>
-                                    <div class="txtb">
-                                        <label for="#">Phone number</label>
-                                        <input type="text" id="userphone" name="userphone" placeholder="Enter your Phone number"required >
-                                    </div>
-                                    <div class="txtb">
-                                        <label for="#">Message</label>
-                                        <textarea cols="70" id="message" name="message" rows="10" required></textarea>
-                                    </div>
-                                    <div class="txtb contactStore">
-                                        <label for="#">Contact store </label>
-                                        <div class="contactStore_wrap">
-                                            <input class="contactStore_btn" id="store" name="store" type="text" placeholder="choose store"  autocomplete="off" required>
-                                            <i class="fa-solid fa-sort-down"></i>
-                                            <ul class="contactStore_list">
-                                                <li>도산 본사</li>
-                                                <li>스포크 광교</li>
-                                                <li>스포크 광진</li>
-                                                <li>스포크 동탄</li>
-                                                <li>스포크 마곡</li>
-                                                <li>스포크 수지</li>
-                                                <li>스포크 송도</li>
-                                                <li>스포크 옥수</li>
-                                                <li>스포크 잠실</li>
-                                                <li>스포크 판교</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="txtb sendEmail">
-                                        <input type="submit" id="send" name="send" value="상담 신청하기">
-                                    </div>
-                            </form>
-                        </div>
+
+                </div>
+                <div class="sect_portfolio_right">
+                    <div class="bg_2"></div>
+                    <div class="portfolio_right_txt">
+                        <h3>마포더클래시아파트</h3>
+                        <p>아기자기한 아이방과 주방 인테리어를 만나보세요</p>
+                    </div>
+                    <div class="portfolio_right_img">
+                        <img src="./img/portfolio_detail_05.jpg" alt="portfolio_detail_01">
                     </div>
                 </div>
-                <div class="contact_bottom">
-                    <div class="inner">
-                        <h3>상담신청 내역</h3>
-                        <ul class="contact_list_wrap">
-                            <li class="contact_list_item">
-                                <ul class="contact_list_item_inner main_list">
-                                    <li id="contact_num">Number</li>
-                                    <li id="contact_message">Message</li>
-                                    <li id="contact_name">Name</li>
-                                    <li id="contact_date">Date</li>
-                                </ul>
-                            </li>
-
-                            <li class="createList_fuc">
-                            </li>
-                            
-                        </ul>
+            </div>
+            <div class="sect_portfolio_inner_bottom">
+                <div class="bottom_img_wrap">
+                    <div class="bottom_img_inner">
+                        <img src="./img/portfolio_detail_01.jpg" alt="portfolio_detail_01">
+                    </div>
+                    <div class="bottom_img_inner">
+                        <img src="./img/portfolio_detail_02.jpg" alt="portfolio_detail_02">
+                    </div>
+                    <div class="bottom_img_inner">
+                        <img src="./img/portfolio_detail_03.jpg" alt="portfolio_detail_03">
+                    </div>
+                    <div class="bottom_img_inner">
+                        <img src="./img/portfolio_detail_04.jpg" alt="portfolio_detail_04">
                     </div>
                 </div>
-
+            </div>
         </div>
     </section>
     <footer>
@@ -196,6 +169,6 @@
             </div>
         </div>
     </footer>
-
+    
 </body>
 </html>

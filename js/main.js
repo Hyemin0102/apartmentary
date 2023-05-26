@@ -19,7 +19,7 @@ const creatItem = (targetArr) =>{
         portfolios = document.createElement('div');
         portfolios.classList.add('swiper-slide');
         portfolios.innerHTML = `
-                    <a href="#">
+                    <a href="./portfolio.html">
                         <div class="portfolio_img active">
                             <img src=${el.img} alt="">
                         </div>
@@ -198,10 +198,10 @@ triggerFuc(sect03TxtBottom, '.sect_3_txt_wrap');
 
 
 //문의글 li 추가
-const form = document.querySelector('form');
+const form = document.getElementById('form');
 const contactListWrap = document.querySelector('.createList_fuc');
 
-
+if(form){
 //로컬 스토리지에서 문자열 가져와서 객체로 변환
 //contactListItem에서 로컬스토리지 저장 값 가져와서 변수에 할당
 //할당값이 없으면 null이 안뜨도록 배열 초기화 해주고, null이 아닌 경우 값 할당
@@ -236,8 +236,8 @@ const localItem = ()=>{
     contactListItem.push(contactObj);
     //console.log('dd222',contact)
 
-    save();
-    createList();
+    save(); //로컬스토리지 저장
+    createList(); //로컬스토리지 값 가져와서 li 생성
     form.reset();
     alert('상담신청이 정상적으로 접수되었습니다. 아래 신청 내역에서 접수 내역을 확인해 주시기 바랍니다.')
 }
@@ -247,17 +247,17 @@ form.addEventListener('submit',(e)=>{
     localItem();
 })
 
+let num = 0; //1씩 증가하는 함수
+
+
 //로컬스토리지에 저장된값 가져와서 List 생성
 const createList = ()=>{
     contactListWrap.innerHTML = ''; // 기존의 요소들을 모두 삭제, 안하면 중복으로 li생성됨
 
-    contactListItem.forEach((el)=>{
+    contactListItem.forEach((el, index)=>{
         const createContact = document.createElement('div');
         createContact.classList.add('contact_list_item');
-    
-        let num = 1; //1씩 증가하는 함수
-        const increase =()=>{num +=1;}
-    
+
         //오늘 날짜 생성
         let today = new Date();
         let year = today.getFullYear();
@@ -266,7 +266,7 @@ const createList = ()=>{
         
         createContact.innerHTML = `
         <ul class="contact_list_item_inner">
-            <li id="contact_num">1</li>
+            <li id="contact_num">${num+index+1}</li>
             <li id="contact_message">${el.msg}</li>
             <li id="contact_name">${el.user}</li>
             <li id="contact_date">${year}-${month}-${day}</li>
@@ -276,8 +276,31 @@ const createList = ()=>{
         
     })
 }
-
 createList();
+}
+
+
+//portfolio detail before/after Btn
+const changeBtnBefore = document.querySelector('.change_before_txt');
+const changeBtnAfter = document.querySelector('.change_after_txt');
+const changeBtnOn = document.querySelector('.change_btn_on');
+
+
+    changeBtnBefore.addEventListener('click',()=>{
+        changeBtnOn.style.right = 'auto'; 
+        changeBtnOn.style.left = '0';
+        document.getElementById('changeimg').src = "./img/portfolio_detail_before.jpg"
+    });
+
+    changeBtnAfter.addEventListener('click',()=>{
+        changeBtnOn.style.right = '0'; 
+        changeBtnOn.style.left = 'auto';
+        document.getElementById('changeimg').src = "./img/portfolio_detail_after.jpg"
+    });
+
+
+
+
 
 
 

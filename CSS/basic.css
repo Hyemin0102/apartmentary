@@ -107,7 +107,7 @@ header.mobile .gnb_open .gnb_open_menu{padding: 20px;}
 header.mobile.active .gnb_open { transform: translateX(0);}
 
 header.mobile.active .gnb_open_menu > li {padding:15px;}
-header.mobile.active .gnb_open_menu > li:nth-child(4) {border: 1px solid #000;
+header.mobile.active .gnb_open_menu > li:last-child {border: 1px solid #000;
   display: inline-block;
   border-radius: 50%;}
 header.mobile.active .gnb_open_menu > li > a {font-size: 30px; transition: 0.5s; font-family:  "Roboto Slab";}
