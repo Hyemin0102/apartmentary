@@ -73,6 +73,7 @@
     .portfolio_right_txt{margin:0;}
     .portfolio_right_txt h3{padding-top: 50px;}
     .portfolio_right_img{display: none;}
+    .sect_portfolio_right .bg_2{display:none;}
 }
 
 /**** mobile ****/
