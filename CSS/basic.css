@@ -106,13 +106,13 @@ header.mobile .gnb_open .gnb_open_menu{padding: 20px;}
 
 header.mobile.active .gnb_open { transform: translateX(0);}
 
-header.mobile.active .gnb_open_menu > li {padding:15px;}
+header.mobile.active .gnb_open_menu > li {padding:20px;}
 header.mobile.active .gnb_open_menu > li:last-child {border: 1px solid #000;
   display: inline-block;
   border-radius: 50%;}
 header.mobile.active .gnb_open_menu > li > a {font-size: 30px; transition: 0.5s; font-family:  "Roboto Slab";}
 
-header.mobile.active .gnb_bottom{height: 100%; background-color: #212121;}
+header.mobile.active .gnb_bottom{height: 100%; }
 
 
 header.mobile.active .gnb_btn {position:relative; width:40px; height:40px; cursor: pointer;}
@@ -220,6 +220,7 @@ h2 {
   font-size: 3.5rem;
   font-weight: 700;
   padding: 30px 0;
+  line-height: 1.5;
 }
 .sect_2 .sect_inner .sect_2_txt .sect_2_txt_wrap .sect_2_txt_bottom {
   opacity: 0;
