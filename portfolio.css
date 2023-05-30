@@ -1,0 +1,122 @@
+.sect_portfolio{padding-top: 150px;}
+.sect_portfolio img {cursor: pointer;}
+.sect_portfolio_inner {display: flex; gap: 50px; flex-direction: column; margin: 50px;}
+
+
+.sect_portfolio_inner_top {position:relative; display:flex; gap: 30px}
+.sect_portfolio_inner_top .sect_portfolio_right {width:50%;}
+
+.sect_portfolio_left .top_img_wrap { width: 100%;}
+
+.sect_portfolio_left .top_img_wrap img {width: 100%;}
+
+.change_btn_wrap{
+    position: absolute;
+    top:20px; left:20px;
+    padding: 0px;
+    height: 35px;
+    width: 110px;
+    border-radius: 65px;
+    background: rgba(22, 22, 22, 0.664);
+    color:#fff;
+    cursor: pointer;
+}
+.change_btn_inner{position: relative;}
+.change_btn_on{position: absolute;
+    top: 0;
+    background: #fff;
+    width: 60px;
+    height: 35px;
+    border-radius: 65px;
+    right: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.change_btn_on.on {}
+
+
+
+.change_btn_txt{display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.87);
+    height: 35px;
+    width: 110px;}
+.change_btn_txt p {display: flex; width: 100%; justify-content: center; align-items: center;}
+
+
+.sect_portfolio_right{position: relative;}
+.sect_portfolio_right .bg_2{
+    z-index: -1;
+    top: -100px;
+    left: -50px;max-width: 600px; height: 600px;
+}
+
+.portfolio_right_txt {margin-bottom: 20%;}
+.portfolio_right_txt h3{font-family: pretendard; font-size: 3rem; font-weight: 700;}
+.portfolio_right_txt > p {font-size: 1.3rem; padding: 30px 0;font-weight: 700;}
+
+
+.bottom_img_wrap {display:flex; gap:30px;} 
+.bottom_img_wrap .bottom_img_inner {flex:1;}
+.bottom_img_wrap .bottom_img_inner img {width: 100%; height: 100%; object-fit: cover;}
+.portfolio_right_img > img{width:100%; height: 100%; object-fit: cover;}
+.portfolio_right_img {height: 500px;}
+
+.sect_portfolio_detail{display: flex; gap: 50px; margin: 30px;}
+.portfolio_info_wrap{background-color: #dfceae; max-width: 1000px; width:100%;}
+.portfolio_info_wrap .portfolio_info_inner{padding: 30px;}
+.portfolio_info_inner > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio_info_inner > ul > li {padding: 20px 0;width: 50%;}
+.portfolio_info_inner > ul > li > p:first-child {padding-bottom: 5px;}
+.portfolio_info_inner > ul > li > p:last-child {padding-top: 15px; font-size: 1.5rem; font-weight: bold;}
+.portfolio_detail_inner > div {padding: 10px 0; font-weight: bold; font-size: 1.2rem;}
+.portfolio_detail_inner > p {line-height: 1.5;  padding: 20px 0;}
+
+
+.portfolio_detail_wrap{max-width: 700px; width:100%; }
+.portfolio_detail_wrap .portfolio_detail_inner{padding: 30px; background-color: #fff;}
+
+/**** tablet ****/
+@media  (max-width:1200px){
+    .sect_portfolio_inner_top{display:block;}
+    .portfolio_right_txt{margin:0;}
+    .portfolio_right_txt h3{padding-top: 50px;}
+    .portfolio_right_img{display: none;}
+    .sect_portfolio_right .bg_2{display:none;}
+    .sect_portfolio_detail{gap:30px}
+    .portfolio_info_wrap .portfolio_info_inner {padding:20px}
+    .portfolio_info_inner > ul > li > p:last-child{font-size: 1rem;}
+
+    .portfolio_detail_wrap .portfolio_detail_inner {padding: 20px;}
+    .portfolio_detail_inner > div {font-size: 1rem;}
+    .portfolio_detail_inner > p{padding: 10px 0;}
+}
+
+/**** mobile ****/
+@media  (max-width:767px){
+    .sect_portfolio_inner{gap:0; margin:30px;}
+    .sect_portfolio_inner_top .sect_portfolio_right{width:unset}
+    .portfolio_right_txt h3{font-size: 2rem;}
+    .portfolio_right_txt > p{font-size: 0.8rem;}
+    .bottom_img_wrap {gap: 10px;flex-wrap: wrap;justify-content: center;}
+    .bottom_img_wrap .bottom_img_inner {flex:auto; width: 47%;}
+
+    .change_btn_wrap{width:50px; height:17px;top: 10px;left: 10px;}
+    .change_btn_on{width:30px; height:17px; }
+    .change_btn_txt{width:50px; height:17px; font-size:5px; font-weight: normal;}
+
+    .sect_portfolio_detail{display:block; margin:0;}
+    .portfolio_info_wrap{margin:20px 0}
+    .portfolio_info_inner > ul > li {padding: 10px 0;}
+    .portfolio_info_inner > ul > li > p:first-child{font-size: 0.7rem; padding-bottom: 0;}
+    .portfolio_info_inner > ul > li > p:last-child{padding-top: 10px; font-size: 0.8rem;}
+    .portfolio_detail_inner > p {line-height: 1.2; font-size: 0.8rem;}
+}
