@@ -19,6 +19,7 @@
 
         <script src="js/prefixfree.min.js"></script>
         <script defer src="js/main.js"></script>
+        <script defer src="js/contact.js"></script>
     </head>
 <body>
     <header class="pc">
@@ -66,7 +67,7 @@
     </header>
     <section class="contact">
         <div class="contact_wrap">
-                <div class="contact_top">
+            <div class="contact_top">
                     <div class="contact_left">
                         <div class="contact_left_txt">
                             <p class="contact_trigger">인테리어 상담,<br> 부담스러워 하지 마세요.</p>
@@ -77,49 +78,49 @@
                         <div class="contact_inner">
                             <h2>GET IN TOUCH</h2>
                             <form action="#" method="get" id="form">
-                                    <div class="txtb">
-                                        <label for="#">Name</label>
-                                        <input type="text" id="username" name="username" value="" placeholder="Enter your Name" required>
+                                <div class="txtb">
+                                    <label for="#">Name</label>
+                                    <input type="text" id="username" name="username" value="" placeholder="Enter your Name" required>
+                                </div>
+                                <div class="txtb">
+                                    <label for="#">Email</label>
+                                    <input type="email" id="useremail" name="useremail" placeholder="Enter your Email" required>
+                                </div>
+                                <div class="txtb">
+                                    <label for="#">Phone number</label>
+                                    <input type="text" id="userphone" name="userphone" placeholder="Enter your Phone number"required >
+                                </div>
+                                <div class="txtb">
+                                    <label for="#">Message</label>
+                                    <textarea cols="70" id="message" name="message" rows="10" required></textarea>
+                                </div>
+                                <div class="txtb contactStore">
+                                    <label for="#">Contact store </label>
+                                    <div class="contactStore_wrap">
+                                        <input class="contactStore_btn" id="store" name="store" type="text" placeholder="choose store"  autocomplete="off" required>
+                                        <i class="fa-solid fa-sort-down"></i>
+                                        <ul class="contactStore_list">
+                                            <li>도산 본사</li>
+                                            <li>스포크 광교</li>
+                                            <li>스포크 광진</li>
+                                            <li>스포크 동탄</li>
+                                            <li>스포크 마곡</li>
+                                            <li>스포크 수지</li>
+                                            <li>스포크 송도</li>
+                                            <li>스포크 옥수</li>
+                                            <li>스포크 잠실</li>
+                                            <li>스포크 판교</li>
+                                        </ul>
                                     </div>
-                                    <div class="txtb">
-                                        <label for="#">Email</label>
-                                        <input type="email" id="useremail" name="useremail" placeholder="Enter your Email" required>
-                                    </div>
-                                    <div class="txtb">
-                                        <label for="#">Phone number</label>
-                                        <input type="text" id="userphone" name="userphone" placeholder="Enter your Phone number"required >
-                                    </div>
-                                    <div class="txtb">
-                                        <label for="#">Message</label>
-                                        <textarea cols="70" id="message" name="message" rows="10" required></textarea>
-                                    </div>
-                                    <div class="txtb contactStore">
-                                        <label for="#">Contact store </label>
-                                        <div class="contactStore_wrap">
-                                            <input class="contactStore_btn" id="store" name="store" type="text" placeholder="choose store"  autocomplete="off" required>
-                                            <i class="fa-solid fa-sort-down"></i>
-                                            <ul class="contactStore_list">
-                                                <li>도산 본사</li>
-                                                <li>스포크 광교</li>
-                                                <li>스포크 광진</li>
-                                                <li>스포크 동탄</li>
-                                                <li>스포크 마곡</li>
-                                                <li>스포크 수지</li>
-                                                <li>스포크 송도</li>
-                                                <li>스포크 옥수</li>
-                                                <li>스포크 잠실</li>
-                                                <li>스포크 판교</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="txtb sendEmail">
-                                        <input type="submit" id="send" name="send" value="상담 신청하기">
-                                    </div>
+                                </div>
+                                <div class="txtb sendEmail">
+                                    <input type="submit" id="send" name="send" value="상담 신청하기">
+                                </div>
                             </form>
                         </div>
                     </div>
-                </div>
-                <div class="contact_bottom">
+            </div>
+            <div class="contact_bottom">
                     <div class="inner">
                         <h3>상담신청 내역</h3>
                         <ul class="contact_list_wrap">
@@ -137,8 +138,7 @@
                             
                         </ul>
                     </div>
-                </div>
-
+            </div>
         </div>
     </section>
     <footer>
