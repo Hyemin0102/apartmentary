@@ -1,4 +1,5 @@
 <img width="80%" src="https://github.com/Hyemin0102/apartmentary/assets/128768462/61fccd42-fdc8-45d0-a1f0-703151300c56"/>
+
 # apartmentart
 실제 존재하는 인테리어 회사의 웹사이트를 리디자인한 반응형 웹사이트입니다.
 
