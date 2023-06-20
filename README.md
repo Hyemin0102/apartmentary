@@ -54,3 +54,5 @@ fetch("./portfolio.json")
 이 과정에서 json파일을 다루는 방법에 대해 공부가 많이 되었습니다.
 - 디자인적으로 웹사이트를 코딩하는 것이 쉽지는 않았지만 굉장히 재밌었습니다.
 - GSAP 을 이용해 애니메이션을 구현하였는데 data-aos 보다 세부적은 효과가 가능해 재밌었습니다.
+
+<img width="80%" src="https://github.com/Hyemin0102/apartmentary/assets/128768462/61fccd42-fdc8-45d0-a1f0-703151300c56"/>
